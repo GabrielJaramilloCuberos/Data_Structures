@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include "HASH.cpp"
+#include "./TADS/HASH.h"
 using namespace std;
 
 
