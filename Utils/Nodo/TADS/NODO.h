@@ -1,27 +1,27 @@
 #ifndef NODO_H
 #define NODO_H
-
-
 #include <bits/stdc++.h>
+
 using namespace std;
 
-class Node {
+template <class T> class Node {
     private: 
-        int character;
+        T character;
         int bit;
-        Node *left;
-        Node *right;
+        Node *left = nullptr;
+        Node *right = nullptr;
     public:
         Node();
-        void setData(int nData);
+        void setData(T nData);
+        void setBit(int  b);
         void addLeft(Node *leftNode);
         void addRight(Node *rightNode);
-        int getCharacter();
+        char getCharacter();
         int getBit();
         Node* getLeftNode();
         Node* getRightNode();
 };
 
-
+#include "NODO.cpp"
 
 #endif // NODO_H

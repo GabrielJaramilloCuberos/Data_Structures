@@ -1,27 +1,36 @@
 #include "NODO.h"
 using namespace std;
 
-Node::Node(){
-
+template <class T> Node<T>::Node(){
+    left = nullptr;
+    right = nullptr;
+    character = 0;
+    bit = -1;
 }
-void Node::setData(int nData){
-
+template <class T>  void Node<T>::setData(T nData){
+    character = nData;
 }
-void Node::addLeft(Node *leftNode){
 
+template <class T> void  Node<T>::setBit(int b){
+    bit = b;
 }
-void Node::addRight(Node *rightNode){
 
+template <class T> void Node<T>::addLeft(Node *leftNode){
+    left = leftNode;
 }
-int Node::getCharacter(){
-
+template <class T>  void Node<T>::addRight(Node *rightNode){
+    right = rightNode;
 }
-int Node::getBit(){
-
+template <class T> char Node<T>::getCharacter(){
+    return character;
 }
-Node* Node::getLeftNode(){
-
+template <class T> int Node<T>::getBit(){
+    return bit;
 }
-Node* Node::getRightNode(){
-
+template <class T> Node<T>* Node<T>::getLeftNode(){
+    return left;
 }
+ 
+template <class T> Node<T>* Node<T>::getRightNode(){
+    return right;
+}    
