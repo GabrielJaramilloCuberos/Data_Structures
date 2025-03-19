@@ -21,7 +21,7 @@ template <class T> void Node<T>::addLeft(Node *leftNode){
 template <class T>  void Node<T>::addRight(Node *rightNode){
     right = rightNode;
 }
-template <class T> char Node<T>::getCharacter(){
+template <class T> T Node<T>::getCharacter(){
     return character;
 }
 template <class T> int Node<T>::getBit(){

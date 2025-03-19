@@ -1,5 +1,5 @@
-#ifndef NODO_H
-#define NODO_H
+#ifndef HUFFMAN_H
+#define HUFFMAN_H
 #include "NODO.h"
 using namespace std;
 
@@ -21,4 +21,4 @@ template <class T> class Tree{
 
 #include "HUFFMAN.cpp"
 
-#endif // NODO_H
+#endif // HUFFMAN_H

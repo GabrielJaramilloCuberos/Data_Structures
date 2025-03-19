@@ -16,7 +16,7 @@ template <class T> class Node {
         void setBit(int  b);
         void addLeft(Node *leftNode);
         void addRight(Node *rightNode);
-        char getCharacter();
+        T getCharacter();
         int getBit();
         Node* getLeftNode();
         Node* getRightNode();
