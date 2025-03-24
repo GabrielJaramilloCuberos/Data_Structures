@@ -1,44 +1,22 @@
-
-#include "TADS/BST.h"
+#include "../BST/TADS/NODE.h"
 #include <bits/stdc++.h>
 
 using namespace std;
 
-
 int main(){
-	struct Node *root = newNode(23);
-	root->left = newNode(10);
-	root->left->right = newNode(19);
-	root->left->left = newNode(2);
-	root->left->left->left = newNode(1);
-    root->left->left->right = newNode(3);
-    root->right = newNode(48);
-    root->right->left = newNode(35);
-    root->right->left->left = newNode(32);
-    root->right->left->right = newNode(40);
-    root->right->right = newNode(53);
-    root->right->right->right = newNode(54);
-    /*
-	cout<<"Preorder traversal: ";
-	traversePreOrder(root);
-    */
-	cout<<"\nInorder traversal: ";
-	traverseInOrder(root);
-    cout<<"\n";
-    
-    cout<<"Funciona el traverseInOrder2?\n";
-    struct Node foundNode = traverseInOrder2(2, root);
-    cout<<"Si\n";
-    struct Node father = traverseInOrder3(2, root);
-    cout<<"Funciona el traverseInOrder3?\n"; 
-    cout<<"Si\n";
-    deleteNode(&foundNode,&father);
-    cout<<"\nInorder traversal: ";
-	traverseInOrder(root);
-    /*
-	cout<<"\nPostorder traversal: ";
-    
-	traversePostOrder(root);
-    */
+    Node* root = nullptr;
+    root = insertarNodo(root, 50);
+    root = insertarNodo(root, 30);
+    root = insertarNodo(root, 55);
+    root = insertarNodo(root, 40);
+    root = insertarNodo(root, 70);
+    root = insertarNodo(root, 60);
+    root = insertarNodo(root, 80);
+
+    cout << "El recorrido inorder es: ";
+    inOrder(root);
+    cout << endl;
+
     return 0;
+
 }
