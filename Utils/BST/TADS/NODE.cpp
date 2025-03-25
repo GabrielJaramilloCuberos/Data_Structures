@@ -71,6 +71,7 @@ Node* buscarNodo(Node* root, int valor){
     return nullptr;
 }
 
+
 Node* hojaMenor(Node* root){
     Node* actual = root;
     while(root && root->getIzquierda() != nullptr){
