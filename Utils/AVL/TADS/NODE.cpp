@@ -3,109 +3,108 @@
 
 using namespace std;
 
-void Node::setAltura(int alt){
+void Node::setAltura(int alt) {
     altura = alt;
 }
 
-void Node::setVal(int valor){
+void Node::setVal(int valor) {
     val = valor;
 }
 
-void Node::setDerecha(Node* der){
+void Node::setDerecha(Node* der) {
     derecha = der;
 }
 
-void Node::setIzquierda(Node* izq){
+void Node::setIzquierda(Node* izq) {
     izquierda = izq;
 }
 
-int Node::getAltura(){
+int Node::getAltura() {
     return altura;
 }
 
-int Node::getVal(){
+int Node::getVal() {
     return val;
 }
 
-Node* Node::getDerecha(){
+Node* Node::getDerecha() {
     return derecha;
 }
 
-Node* Node::getIzquierda(){
+Node* Node::getIzquierda() {
     return izquierda;
 }
 
-int alturaNodo(Node* root){
-    if(root == nullptr){
-        return -1;
-    }else{
-        return root->getAltura();
-    }
+int alturaNodo(Node* root) {
+    return (root == nullptr) ? -1 : root->getAltura();
 }
 
-int factorDeBalance(Node* root){
-    if(root == nullptr){
+int factorDeBalance(Node* root) {
+    if (root == nullptr) {
         return 0;
-    }else{
-        return (root->getIzquierda()->getAltura() - root->getDerecha()->getAltura());
     }
+    return alturaNodo(root->getIzquierda()) - alturaNodo(root->getDerecha());
 }
 
-Node* rotacionDerecha(Node* root){
+Node* rotacionDerecha(Node* root) {
     Node* x = root->getIzquierda();
     Node* z = x->getDerecha();
 
     x->setDerecha(root);
-    root->setDerecha(z);
+    root->setIzquierda(z);
 
-    root->setAltura(max(root->getDerecha()->getAltura(),root->getIzquierda()->getAltura()) + 1);
-    x->setAltura(max(x->getDerecha()->getAltura(), x->getDerecha()->getAltura()) + 1);
+    root->setAltura(1 + max(alturaNodo(root->getIzquierda()), alturaNodo(root->getDerecha())));
+    x->setAltura(1 + max(alturaNodo(x->getIzquierda()), alturaNodo(x->getDerecha())));
 
     return x;
 }
 
-Node* rotacionIzquierda(Node* root){
+Node* rotacionIzquierda(Node* root) {
     Node* y = root->getDerecha();
     Node* z = y->getIzquierda();
 
     y->setIzquierda(root);
     root->setDerecha(z);
 
-    root->setAltura(max(root->getDerecha()->getAltura(), root->getDerecha()->getAltura()) + 1);
-    y->setAltura(max(y->getDerecha()->getAltura(),y->getIzquierda()->getAltura()));
+    root->setAltura(1 + max(alturaNodo(root->getIzquierda()), alturaNodo(root->getDerecha())));
+    y->setAltura(1 + max(alturaNodo(y->getIzquierda()), alturaNodo(y->getDerecha())));
 
     return y;
 }
 
-Node* insertarNodo(Node* root, int val){
-    if(root == nullptr){
-        Node* nuevo;
-        nuevo->setAltura(root->getAltura() + 1);
+Node* insertarNodo(Node* root, int val) {
+    if (root == nullptr) {
+        Node* nuevo = new Node();
+        nuevo->setAltura(1);
         nuevo->setDerecha(nullptr);
         nuevo->setIzquierda(nullptr);
         nuevo->setVal(val);
         return nuevo;
     }
-    
-    if(val < root->getVal()){
-        insertarNodo(root->getDerecha(), val);
-    }else if(val > root->getVal()){
-        insertarNodo(root->getIzquierda(), val);
-    }else{
-        return root;
+
+    if (val < root->getVal()) {
+        root->setIzquierda(insertarNodo(root->getIzquierda(), val));
+    } else if (val > root->getVal()) {
+        root->setDerecha(insertarNodo(root->getDerecha(), val));
+    } else {
+        return root; // No se permiten valores duplicados
     }
 
-    root->setAltura(max(root->getDerecha()->getAltura(),root->getIzquierda()->getAltura()) + 1);
+    root->setAltura(1 + max(alturaNodo(root->getIzquierda()), alturaNodo(root->getDerecha())));
     int balance = factorDeBalance(root);
 
-    if(balance > 1 && val < root->getIzquierda()->getAltura()){
+    // Rotaciones para balancear el árbol
+    if (balance > 1 && val < root->getIzquierda()->getVal()) {
         return rotacionDerecha(root);
-    }else if(balance < -1 && val > root->getDerecha()->getAltura()){
+    }
+    if (balance < -1 && val > root->getDerecha()->getVal()) {
         return rotacionIzquierda(root);
-    }else if(balance > 1 && val > root->getIzquierda()->getAltura()){
+    }
+    if (balance > 1 && val > root->getIzquierda()->getVal()) {
         root->setIzquierda(rotacionIzquierda(root->getIzquierda()));
         return rotacionDerecha(root);
-    }else if(balance < -1 && val < root->getDerecha()->getVal()){
+    }
+    if (balance < -1 && val < root->getDerecha()->getVal()) {
         root->setDerecha(rotacionDerecha(root->getDerecha()));
         return rotacionIzquierda(root);
     }
@@ -113,74 +112,81 @@ Node* insertarNodo(Node* root, int val){
     return root;
 }
 
-Node* nodoMenorValor(Node* root){
+Node* nodoMenorValor(Node* root) {
     Node* actual = root;
-    while(actual->getIzquierda() != nullptr){
+    while (actual->getIzquierda() != nullptr) {
         actual = actual->getIzquierda();
     }
     return actual;
 }
 
-Node* eliminarNodo(Node* root, int val){
-    if(root == nullptr){
+Node* eliminarNodo(Node* root, int val) {
+    if (root == nullptr) {
         return root;
-    }else if(val < root->getVal()){
-        root->setIzquierda(eliminarNodo(root->getIzquierda(),val));
-    }else if(val > root->getVal()){
+    }
+
+    if (val < root->getVal()) {
+        root->setIzquierda(eliminarNodo(root->getIzquierda(), val));
+    } else if (val > root->getVal()) {
         root->setDerecha(eliminarNodo(root->getDerecha(), val));
-    }else{
-        if((root->getIzquierda() == nullptr) || (root->getDerecha() == nullptr)){
+    } else {
+        if ((root->getIzquierda() == nullptr) || (root->getDerecha() == nullptr)) {
             Node* temp = root->getIzquierda() ? root->getIzquierda() : root->getDerecha();
-            if(temp == nullptr){
+            if (temp == nullptr) {
                 temp = root;
                 root = nullptr;
-            }else{
+            } else {
                 *root = *temp;
             }
             delete temp;
-        }else{
+        } else {
             Node* temp = nodoMenorValor(root->getDerecha());
             root->setVal(temp->getVal());
             root->setDerecha(eliminarNodo(root->getDerecha(), temp->getVal()));
         }
     }
-    if(root == nullptr){
+
+    if (root == nullptr) {
         return root;
     }
-    root->setAltura(max(root->getDerecha()->getAltura(), root->getIzquierda()->getAltura()) + 1);
+
+    root->setAltura(1 + max(alturaNodo(root->getIzquierda()), alturaNodo(root->getDerecha())));
     int balance = factorDeBalance(root);
 
-    if(balance > 1 && factorDeBalance(root->getIzquierda()) >= 0){
+    if (balance > 1 && factorDeBalance(root->getIzquierda()) >= 0) {
         return rotacionDerecha(root);
-    }else if(balance > 1 && factorDeBalance(root->getIzquierda()) < 0){
+    }
+    if (balance > 1 && factorDeBalance(root->getIzquierda()) < 0) {
         root->setIzquierda(rotacionIzquierda(root->getIzquierda()));
-    }else if(balance < -1 && factorDeBalance(root->getIzquierda()) <= 0){
+        return rotacionDerecha(root);
+    }
+    if (balance < -1 && factorDeBalance(root->getDerecha()) <= 0) {
         return rotacionIzquierda(root);
-    }else if(balance < -1 && factorDeBalance(root->getDerecha()) > 0){
+    }
+    if (balance < -1 && factorDeBalance(root->getDerecha()) > 0) {
         root->setDerecha(rotacionDerecha(root->getDerecha()));
         return rotacionIzquierda(root);
     }
-    return root;
 
+    return root;
 }
 
-void inOrder(Node* root){
-    if(root != nullptr){
+void inOrder(Node* root) {
+    if (root != nullptr) {
         inOrder(root->getIzquierda());
-        cout<<root->getVal()<<"\n";
+        cout << root->getVal() << " con altura "<< root->getAltura() << endl;
         inOrder(root->getDerecha());
     }
-
 }
 
-bool buscarNodo(Node* root, int val){
-    if(root == nullptr){
+bool buscarNodo(Node* root, int val) {
+    if (root == nullptr) {
         return false;
     }
-    if(root->getVal() == val){
+    if (root->getVal() == val) {
         return true;
     }
-    if(val < root->getVal()){
+    if (val < root->getVal()) {
         return buscarNodo(root->getIzquierda(), val);
     }
     return buscarNodo(root->getDerecha(), val);
