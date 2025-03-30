@@ -6,7 +6,7 @@ using namespace std;
 
 class NodoExpresion{
   protected:
-    char dato;
+    string dato;
     bool operando;
     NodoExpresion *hijoIzq;
     NodoExpresion *hijoDer;
@@ -14,8 +14,8 @@ class NodoExpresion{
   NodoExpresion();
   ~NodoExpresion();
 
-  char getDato();
-  void setDato(char val);
+  string getDato();
+  void setDato(string val);
 
   void setOperando(bool op);
   bool getOperando();

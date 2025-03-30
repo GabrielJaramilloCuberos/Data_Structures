@@ -18,7 +18,6 @@ Comportamiento:
     NodoExp* llenarDesdePrefijaa(vector<string> &q, unsigned int &pos, NodoExp* actual);
     NodoExp* llenarDesdePosfijaa (vector<string> &q, unsigned int &pos, NodoExp* actual);
     void tokenizar(const string & s,vector <string> &q);
-};
 
 
 TAD NodoExp

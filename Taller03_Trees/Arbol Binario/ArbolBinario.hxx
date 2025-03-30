@@ -74,7 +74,8 @@ bool ArbolBinario<T>::eliminar(T& val)
         //Nodo* nuevo = borrar->hijoIzq->extremo_der();
 		NodoBinario<T>* nuevo = borrar->hijoIzq->extremo_der();
         borrar->fijarDato(nuevo->obtenerDato());
-		delete(nuevo);    }
+		delete(nuevo);
+    }
     else if(borrar->hijoDer != NULL)
     {
 		

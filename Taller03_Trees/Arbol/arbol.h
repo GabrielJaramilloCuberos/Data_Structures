@@ -12,18 +12,18 @@ class Arbol {
 	public:
 		Arbol();
 		Arbol(T val);
+		~Arbol();
 	    bool esVacio();
    	 	T obtenerRaiz();
    	 	void fijarRaiz(Nodo<T>* root);
    	 	bool insertarNodo(T padre, T val);
+		bool eliminar(T& val);
+		Nodo<T>*  buscar(T val);
     	int altura();
 	    int tamano();
-   		void insertar(T& val);
-    	bool eliminar(T& val);
-    	Nodo<T>*  buscar(T val);
     	void preOrden();
+		void posOrden();
     	void inOrden();
-    	void posOrden();
     	void nivelOrden();
 };
 

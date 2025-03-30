@@ -1,0 +1,17 @@
+digraph Tree {
+    node [shape=circle, style=filled, fillcolor=lightblue];
+    edge [color=black, penwidth=2];
+    rankdir=TB;
+    bgcolor=lightgrey;
+    label="Arbol general";
+    labelloc="t";
+    labeljust="c"
+
+    // Define edges
+    1 -> {2 3 4 5};
+    2 -> {6 7};
+    3 -> {8,9};
+    4 -> {10};
+    5 -> {11 12 13};
+
+}

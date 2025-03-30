@@ -24,23 +24,23 @@ Datos Minimos:
     desc,contenedor, contiene un conjunto apuntadores a nodos.
 Comportamiento:
   Nodo(), crea un nodo vacio.
-    Nodo(const T& val), crea un nodo a partir de un valor
-    ~Nodo()
-    obtenerDato(),?, retorna el dato que es contenido por el nodo
-    fijarDato(val), reemplaza el valor de un nodo por val.
-    obtenerDesc(),contenedor, retorna la el conjunto de descendientes
-    fijarDesc(listaDesc), fija el conjunto de Nodos listaDesc como el conjunto de descendientes del nodo
-    adicionarDesc( nval), adiciona un Nodo creado a partir de val al conjunto de descendientes
-    eliminarDesc( val),booleano, elimina el nodo de valor val del conjunto de descendientes, retorna verdadero si se elimina.
-    buscarDesc(val), nodo*,retorna un apuntador al descendiente de valor val.
-    limpiarLista(), elimina la lista de descendientes.
-    numDesc(),entero, retorna el numero de descendientes del nodo.
-    insertarNodo(padre, n), inserta un nodo de valor n, en el nodo padre de alguno de los subarboles. retorna verdadero si se logra.
-    eliminarNodo(n), elimina el nodo de valor n de alguno de los subarboles
-    buscarNodo(val), apuntador,retorna un apuntador al nodo de valor val de alguno de los subarboles.
-    altura(), entero,retorna la altura del nodo
-    tamano(), entero,retorna el numero de nodos del subarbol que tiene como raiz el nodo
-    preOrden(), imprime el arbol que tiene como raiz el nodo en PreOrden.
-    posOrden(), imprime el arbol que tiene como raiz el nodo en PosORden
-    inOrden(), imprime el arbol que tiene como raiz el nodo en inOrden.
-    nivelOrden(int nivel,int lvActual), imprime el arbol que tiene como raiz el nodo en NivelOrden.
+  Nodo(const T& val), crea un nodo a partir de un valor
+  ~Nodo()
+  obtenerDato(),?, retorna el dato que es contenido por el nodo
+  fijarDato(val), reemplaza el valor de un nodo por val.
+  obtenerDesc(),contenedor, retorna la el conjunto de descendientes
+  fijarDesc(listaDesc), fija el conjunto de Nodos listaDesc como el conjunto de descendientes del nodo
+  adicionarDesc( nval), adiciona un Nodo creado a partir de val al conjunto de descendientes
+  eliminarDesc( val),booleano, elimina el nodo de valor val del conjunto de descendientes, retorna verdadero si se elimina.
+  buscarDesc(val), nodo*,retorna un apuntador al descendiente de valor val.
+  limpiarLista(), elimina la lista de descendientes.
+  numDesc(),entero, retorna el numero de descendientes del nodo.
+  insertarNodo(padre, n), inserta un nodo de valor n, en el nodo padre de alguno de los subarboles. retorna verdadero si se logra.
+  eliminarNodo(n), elimina el nodo de valor n de alguno de los subarboles
+  buscarNodo(val), apuntador,retorna un apuntador al nodo de valor val de alguno de los subarboles.
+  altura(), entero,retorna la altura del nodo
+  tamano(), entero,retorna el numero de nodos del subarbol que tiene como raiz el nodo
+  preOrden(), imprime el arbol que tiene como raiz el nodo en PreOrden.
+  posOrden(), imprime el arbol que tiene como raiz el nodo en PosORden
+  inOrden(), imprime el arbol que tiene como raiz el nodo en inOrden.
+  nivelOrden(int nivel,int lvActual), imprime el arbol que tiene como raiz el nodo en NivelOrden.

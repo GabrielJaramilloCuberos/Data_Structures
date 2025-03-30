@@ -11,6 +11,7 @@ class NodoBinario{
 
 	public:
 		NodoBinario();
+		NodoBinario(T& val);
 		~NodoBinario();
 		T& getDato();
 		void setDato(T& val);

@@ -1,12 +1,12 @@
 #include<iostream>
-#include "ArbolAVL.h"
-#include "NodoAVL.h"
+#include "ArbolBinarioAVL.h"
+#include "NodoBinarioAVL.h"
 
 using namespace std;
 
 main(int argc, char* argv[])
 {
-    ArbolAVL<int> arbolito;
+    ArbolBinarioAVL<int> arbolito;
 	while(true)
 	{
 		int dato;

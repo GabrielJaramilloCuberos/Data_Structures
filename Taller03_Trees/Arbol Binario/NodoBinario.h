@@ -13,6 +13,7 @@ class NodoBinario
 
   public:
   	NodoBinario();
+    NodoBinario(T& val);
     T& obtenerDato();
     void fijarDato(T& val);
     NodoBinario<T>* obtenerHijoIzq();
