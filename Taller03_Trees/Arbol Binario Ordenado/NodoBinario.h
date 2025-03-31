@@ -7,7 +7,7 @@ class NodoBinario{
 	protected:
 		T dato;
 		NodoBinario<T> *hijoIzq;
-		NodoBinario<t> *hijoDer;
+		NodoBinario<T> *hijoDer;
 
 	public:
 		NodoBinario();
@@ -20,5 +20,7 @@ class NodoBinario{
 		void setHijoIzq(NodoBinario<T> *izq);
 		void setHijoDer(NodoBinario<T> *der);
 };
+
+#include "NodoBinario.hxx"
 
 #endif //NODOBINARIO_H

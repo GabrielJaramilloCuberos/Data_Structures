@@ -1,44 +1,45 @@
 #include "NodoBinario.h"
-
+#include <iostream>
 using namespace std;
-
-NodoBinario::NodoBinario(){
+template <class T>
+NodoBinario<T>::NodoBinario(){
 	this->hijoIzq=NULL;
 	this->hijoDer=NULL;
 }
 
-NodoBinario::~NodoBinario(){
+template <class T>
+NodoBinario<T>::~NodoBinario(){
 }
 
 template <class T>
-T& NodoBinario::getDato(){
+T& NodoBinario<T>::getDato(){
 	return this->dato;
 }
 
 template <class T>
-void NodoBinario::setDato(T& val){
+void NodoBinario<T>::setDato(T& val){
 	this->dato=val;
 	return;
 }
 
 template <class T>
-NodoBinario<T>* NodoBinario::getHijoIzq(){
+NodoBinario<T>* NodoBinario<T>::getHijoIzq(){
 	return this->hijoIzq;
 }
 
 template <class T>
-NodoBinario<T>* NodoBinario::getHijoDer(){
+NodoBinario<T>* NodoBinario<T>::getHijoDer(){
 	return this->hijoDer;
 }
 
 template <class T>
-void NodoBinario::setHijoIzq(NodoBinario<T>* izq){
+void NodoBinario<T>::setHijoIzq(NodoBinario<T>* izq){
 	this->hijoIzq=izq;
 	return;
 }
 
 template <class T>
-void NodoBinario::setHijoIzq(NodoBinario<T>* der){
+void NodoBinario<T>::setHijoDer(NodoBinario<T>* der){
 	this->hijoDer=der;
 	return;
 }

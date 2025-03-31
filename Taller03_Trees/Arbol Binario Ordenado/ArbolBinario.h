@@ -1,5 +1,6 @@
 #ifndef ARBOLBINARIO_H
 #define ARBOLBINARIO_H
+#include "NodoBinario.h"
 
 template <class T>
 
@@ -29,5 +30,7 @@ class ArbolBinario{
 		void posOrden();
 		void nivelOrden();
 };
+
+#include "ArbolBinario.hxx"
 
 #endif //ARBOLBINARIO_H
