@@ -126,16 +126,11 @@ void Nodo<T>:: preOrden()
 }
 
 template<class T>
-void Nodo<T>:: posOrden()
-{
-	for(int i = 0; i < hijos.size() ; i++){
-        hijos[i]->preOrden();
-	}
-	return;
-
-	cout << "\t"<<this->obtenerDato() << endl;
-	return;
-
+void Nodo<T>::posOrden() {
+    for (int i = 0; i < hijos.size(); i++) {
+        hijos[i]->posOrden();
+    }
+    cout << "\t" << this->obtenerDato() << endl;
 }
 template <class T>
 void Nodo<T>::inOrden() {
