@@ -3,7 +3,7 @@
 Este tipo de arboles se caracterizan por los siguientes puntos 
 
 1. *Son* autobalanceados, por lo cual su complejidad tiende a ser logaritmica teniendo en cuenta la altura
-2. Son estrictamente binarios, por lo que su orden es *2*
+2. Son estrictamente binarios, por lo que su orden es 
 
 ![Arbol-general](https://github.com/SalomonAvila/Data_Structures/blob/main/Taller03_Trees/Arbol%20AVL/AVL.svg)
 
