@@ -9,7 +9,7 @@ template< class T >
 class Nodo{
   protected:
     T dato;
-    vector<Nodo <T> > hijos;
+    vector<Nodo<T>*> hijos;
 
   public:
   	Nodo();
@@ -17,7 +17,7 @@ class Nodo{
     ~Nodo();
     T& obtenerDato();
     void fijarDato(T& val);
-    vector<Node*> obtenerDesc();
+    vector<Nodo*> obtenerDesc();
     void fijarDesc(vector<Nodo*> &desc);
     void adicionarDesc(T& val);
     bool eliminarDesc(T &val);

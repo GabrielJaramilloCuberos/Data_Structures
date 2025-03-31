@@ -14,7 +14,7 @@ class Arbol {
 		Arbol(T val);
 		~Arbol();
 	    bool esVacio();
-   	 	T obtenerRaiz();
+		Nodo<T>* obtenerRaiz();
    	 	void fijarRaiz(Nodo<T>* root);
    	 	bool insertarNodo(T padre, T val);
 		bool eliminar(T& val);

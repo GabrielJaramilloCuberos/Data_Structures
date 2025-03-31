@@ -6,13 +6,20 @@ using namespace std;
 template<class T>
 Nodo<T>::Nodo()
 {
-
+    this->dato = T();
 }
 
 template<class T>
 Nodo<T>::Nodo(T valor)
 {
     this->dato = valor;
+}
+
+template<class T>
+Nodo<T>::~Nodo() {
+    for (auto& hijo : hijos) {
+        delete hijo;
+    }
 }
 
 template<class T>
@@ -28,20 +35,15 @@ void Nodo<T>::fijarDato(T& val)
     return;
 }
 
+
 template<class T>
-int Nodo<T>::altura()
-{
-	if(hijos.size()==0)
-	{
-		return 0;
-	}
-	int maximo = 0, aux_altura;
-	for(int i = 0;i<hijos.size() ; i++){
-	    aux_altura = hijos[i].altura();
-        if(aux_altura> maximo)
-            maximo = aux_altura;
-	}
-	return maximo + 1;
+int Nodo<T>::altura() {
+    if (hijos.empty()) return 0;
+    int maxAltura = 0;
+    for (auto& hijo : hijos) {
+        maxAltura = max(maxAltura, hijo.altura());
+    }
+    return maxAltura + 1;
 }
 
 
@@ -61,27 +63,20 @@ int Nodo<T>::tamano()
 
 
 template<class T>
-void Nodo<T>:: limpiarLista()
-{
-    if(hijos.size()==0){
-        delete(this);
-        return;
-
+void Nodo<T>::limpiarLista() {
+    for (int i = 0; i < hijos.size(); i++) {
+        hijos[i]->limpiarLista();
+        delete hijos[i];
     }
-
-    for(int i=0; i<hijos.size(); i++){
-        hijos[i].limpiarLista();
-    }
-
+    hijos.clear();
 }
 
 
 
 template<class T>
-void Nodo<T>:: adicionarDesc(T &val)
-{
-    Nodo* hijo = new Nodo(val);
-    hijos.push_back(*hijo);
+void Nodo<T>::adicionarDesc(T &val) {
+    Nodo<T>* hijo = new Nodo<T>(val);
+    hijos.push_back(hijo);
 }
 
 
@@ -105,18 +100,18 @@ bool Nodo<T>:: eliminarDesc(T &val){
 
 template<class T>
 Nodo<T>* Nodo<T>:: buscar(T val){
-    if(this->dato == val)
+    if(dato == val)
         return this;
-    if(this->hijos.size() == 0)
-        return NULL;
-    Nodo* aux;
+    if(hijos.size() == 0)
+        return nullptr;
+    Nodo<T>* aux;
     for(int i = 0; i<hijos.size() ; i++){
-        aux = hijos[i].buscar(val);
-        if(aux!=NULL)
+        aux = hijos[i]->buscar(val);
+        if(aux!=nullptr)
             return aux;
     }
 
-    return NULL;
+    return nullptr;
 
 }
 
@@ -125,7 +120,7 @@ void Nodo<T>:: preOrden()
 {
 	cout << "\t"<<this->obtenerDato() << endl;
 	for(int i = 0; i < hijos.size() ; i++){
-        hijos[i].preOrden();
+        hijos[i]->preOrden();
 	}
 	return;
 }
@@ -134,7 +129,7 @@ template<class T>
 void Nodo<T>:: posOrden()
 {
 	for(int i = 0; i < hijos.size() ; i++){
-        hijos[i].preOrden();
+        hijos[i]->preOrden();
 	}
 	return;
 
@@ -147,24 +142,24 @@ void Nodo<T>::inOrden() {
     int mitad = hijos.size() / 2;
 
     for (int i = 0; i < mitad; i++) {
-        hijos[i].inOrden();
+        hijos[i]->inOrden();
     }
     
     cout << "\t" << this->obtenerDato() << endl;
 
     for (int i = mitad; i < hijos.size(); i++) {
-        hijos[i].inOrden();
+        hijos[i]->inOrden();
     }
 
     return;
 }
 
 template<class T>
-void Nodo<T>::nivelOrden(queue<Nodo*> &cola){
-	cola.push(this);
-	for(int i=0 ; i<this->hijos->size() ; i++){
+void Nodo<T>::nivelOrden(queue<Nodo*> &cola) {
+    cola.push(this);
+    for (int i = 0; i < this->hijos.size(); i++) {
         cola.push(this->hijos[i]);
-	}
+    }
 }
 
 
