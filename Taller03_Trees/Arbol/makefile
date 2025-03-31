@@ -5,7 +5,7 @@ EXEC = bin/arbol
 CXX = g++
 
 # Flags de compilación
-CXXFLAGS = -std=c++23
+CXXFLAGS = -std=c++17
 
 # Archivos fuente
 SRCS = prueba_arbol.cpp

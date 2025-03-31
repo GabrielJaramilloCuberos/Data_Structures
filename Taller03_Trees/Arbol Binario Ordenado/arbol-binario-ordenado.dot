@@ -1,0 +1,15 @@
+digraph Tree {
+    node [shape=circle, style=filled, fillcolor=lightblue];
+    edge [color=black, penwidth=2];
+    rankdir=TB;
+    bgcolor=lightgrey;
+    label="Arbol Binario Ordenado";
+    labelloc="t";
+    labeljust="c"
+
+    7 -> {3 9};
+    3 -> {2 5};
+    2 -> {1};
+    5 -> {4 6};
+    9 -> {8 10};
+}
