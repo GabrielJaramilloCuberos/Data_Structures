@@ -1,15 +1,18 @@
 #include "ArbolBinario.h"
-
+#include <iostream>
 using namespace std;
 
-ArbolBinario::ArbolBinario(){
+template <class T>
+ArbolBinario<T>::ArbolBinario(){
 	this->raiz=NULL;
 }
 
-ArbolBinario::~ArbolBinario(){
+template <class T>
+ArbolBinario<T>::~ArbolBinario(){
 }
 
-bool ArbolBinario::esVacio(){
+template <class T>
+bool ArbolBinario<T>::esVacio(){
 	if(this->raiz==NULL){
 		return true;
 	}
@@ -17,12 +20,12 @@ bool ArbolBinario::esVacio(){
 }
 
 template <class T>
-T& ArbolBinario::datoRaiz(){
+T& ArbolBinario<T>::datoRaiz(){
 	return (this->raiz).getDato();
 }
 
 template <class T>
-int ArbolBinario::altura(NodoBinario<T> *inicio){
+int ArbolBinario<T>::altura(NodoBinario<T> *inicio){
 	int alturaIzq=0;
 	int alturaDer=0;
 	if(inicio==NULL){
@@ -37,11 +40,15 @@ int ArbolBinario::altura(NodoBinario<T> *inicio){
 	if(inicio->getHijoDer()!=NULL){
 		alturaDer+=altura(inicio->gethijoDer())+1;
 	}
-	alturaIzq>alturaDer?return (alturaIzq):return (alturaDer);
+	if(alturaIzq > alturaDer){
+		return (alturaIzq);
+	}else{
+		return (alturaDer);
+	}
 }
 
 template <class T>
-int ArbolBinario::tamano(NodoBinario<T> *inicio){
+int ArbolBinario<T>::tamano(NodoBinario<T> *inicio){
 	int nodosIzq=0;
 	int nodosDer=0;
 	if(inicio==NULL){
@@ -59,10 +66,11 @@ int ArbolBinario::tamano(NodoBinario<T> *inicio){
 	return nodosIzq+nodosDer+1;
 }
 
-bool ArbolBinario::insertar(T& val, NodoBinario<T> *nod){
+template <class T>
+bool ArbolBinario<T>::insertar(T& val, NodoBinario<T> *nod){
 
 	//crea nodo a insertar
-	NodoBinario<T> *nodito = new NodoBinario();
+	NodoBinario<T> *nodito = new NodoBinario<T>();
 	nodito->setDato(val);
 
 	// inserta en la raiz si no existia antes
@@ -105,14 +113,4 @@ bool ArbolBinario::insertar(T& val, NodoBinario<T> *nod){
 	{
 		return false;
 	}
-}
-
-
-
-
-
-
-
-}
-
 }

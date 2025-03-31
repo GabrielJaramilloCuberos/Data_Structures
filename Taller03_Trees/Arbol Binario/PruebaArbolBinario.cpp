@@ -13,6 +13,12 @@ main(int argc, char* argv[])
 		cin>>dato;
 		arbolito.insertar(dato);
 	}
-	
+	cout<<"El recorrido nivelOrden \n";
 	arbolito.nivelOrden();
+	cout<<"El recorrido inOrden \n";
+	arbolito.inOrden();
+	cout<<"El recorrido posOrden \n";
+	arbolito.posOrden();
+	cout<<"El recorrido preOrden \n";
+	arbolito.preOrden();
 }

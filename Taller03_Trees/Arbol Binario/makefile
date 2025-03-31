@@ -1,5 +1,5 @@
 # Nombre del ejecutable
-EXEC = bin/Arbolito
+EXEC = bin/PruebaArbolBinario
 
 # Compilador
 CXX = g++
@@ -8,10 +8,10 @@ CXX = g++
 CXXFLAGS = -std=c++17
 
 # Archivos fuente
-SRCS = Arbolito.cpp
+SRCS = PruebaArbolBinario.cpp
 
 # Archivos objeto
-OBJS = bin/Arbolito.o
+OBJS = bin/PruebaArbolBinario.o
 
 # Detectar sistema operativo
 OS := $(shell uname 2>/dev/null || echo Windows)
@@ -31,7 +31,7 @@ $(EXEC): $(OBJS)
 	$(CXX) $(OBJS) -o $(EXEC)
 
 # Regla para compilar archivos .cpp a .o en bin/
-bin/Arbolito.o: Arbolito.cpp | bin
+bin/PruebaArbolBinario.o: PruebaArbolBinario.cpp | bin
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Crear carpetas necesarias
