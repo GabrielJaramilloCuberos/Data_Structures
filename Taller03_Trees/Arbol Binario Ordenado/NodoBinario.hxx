@@ -18,7 +18,7 @@ T& NodoBinario<T>::getDato(){
 
 template <class T>
 void NodoBinario<T>::setDato(T& val){
-	this->dato=val;
+	this->dato = val;
 	return;
 }
 

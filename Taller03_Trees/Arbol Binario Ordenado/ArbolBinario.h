@@ -25,10 +25,6 @@ class ArbolBinario{
 		void inOrden(NodoBinario<T> *inicio);
 		void posOrden(NodoBinario<T> *inicio);
 		void nivelOrden(NodoBinario<T> *inicio);
-		void preOrden();
-		void inOrden();
-		void posOrden();
-		void nivelOrden();
 };
 
 #include "ArbolBinario.hxx"

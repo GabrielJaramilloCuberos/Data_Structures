@@ -26,6 +26,10 @@ int main(){
     arbol.inOrden();
     cout<<"posOrden"<<endl;
     arbol.posOrden();
+    int elim = 2;
+    arbol.eliminar(elim);
+    cout<<"inOrden"<<endl;
+    arbol.inOrden();
     
     return 0;
 

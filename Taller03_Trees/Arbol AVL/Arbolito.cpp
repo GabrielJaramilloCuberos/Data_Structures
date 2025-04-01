@@ -4,7 +4,7 @@
 
 using namespace std;
 
-main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     ArbolBinarioAVL<int> arbolito;
 	while(true)

@@ -81,20 +81,21 @@ void Nodo<T>::adicionarDesc(T &val) {
 
 
 template<class T>
-bool Nodo<T>:: eliminarDesc(T &val){
-    bool correr=false;
-    for(int i=0;i<hijos.size();i++){
-        if(correr){
-            hijos[i-1]=hijos[i];
+bool Nodo<T>::eliminarDesc(T &val) {
+    for (int i = 0; i < hijos.size(); i++) {
+        // Si encontramos el nodo a eliminar
+        if (hijos[i]->obtenerDato() == val) {
+            Nodo<T>* nodoAEliminar = hijos[i];
+            hijos.erase(hijos.begin() + i);
+            for(int j = 0; j<nodoAEliminar->hijos.size(); j++){
+                hijos.insert(hijos.begin()+i, nodoAEliminar->hijos[j]);
+            }
+            
         }
-        if(hijos[i] == val)
-            correr=true;
     }
 
-    if(!correr)
-        return false;
-    hijos.pop_back();
-    return true;
+
+    return false; // Nodo no encontrado
 }
 
 

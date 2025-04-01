@@ -2,7 +2,7 @@
 #define __NODO__H__
 
 using namespace std;
-
+#include <utility>
 template< class T >
 class Nodo
 {
@@ -20,12 +20,12 @@ class Nodo
   	int altura();
   	int tamano();
     pair<T,T> obtenerDato();
-    void insertar(pair<T,T>  val);
+    void insertar(pair<T,T>  val, int ma);
     void fijarDato(pair<T,T> val);
     void preOrden();
     void posOrden();
     Nodo* buscar(pair<T,T> val);
 };
 
-#include "Nodo.hxx"
+#include "nodo.hxx"
 #endif

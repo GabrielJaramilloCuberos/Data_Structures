@@ -45,7 +45,7 @@ int ArbolBinario<T>::tamano()
 template<class T>
 void ArbolBinario<T>::insertar(T& val)
 {
-    if(this->raiz!=NULL)
+    if(this->raiz!=nullptr)
     {
         this->raiz->insertar(val);
     }

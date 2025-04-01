@@ -64,7 +64,7 @@ bool Arbol<T>::insertarNodo(T padre, T val) {
 template<class T>
 bool Arbol<T>::eliminar(T &val)
 {
-    return this->raiz->eliminar(val);
+    return raiz->eliminarDesc(val);
 }
 
 template<class T>
@@ -93,6 +93,8 @@ void Arbol<T>:: posOrden()
 
 template<class T>
 void Arbol<T>:: nivelOrden()
-{
-    this->raiz->nivelOrden();
+{   
+    queue<Nodo<T>*> cola;
+    cola.push(this->raiz);
+    this->raiz->nivelOrden(cola);
 }

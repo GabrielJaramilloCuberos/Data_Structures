@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include "quadtree.h"
 
 using namespace std;
@@ -6,7 +5,7 @@ using namespace std;
 template<class T>
 Arbol<T>::Arbol()
 {
-    Nodo<T>* root = NULL;
+    Nodo<T>* root = new Nodo<T>();
 }
 
 template<class T>
@@ -15,6 +14,18 @@ Arbol<T>::Arbol(pair<T,T> val)
     Nodo<T>* root =new  Nodo<T>(val);
     this->raiz=root;
 }
+
+
+template <class T>
+void Arbol<T>::setMaximo(int ma){
+    this->maximo = ma;
+}
+
+template <class T>
+int Arbol<T>::getMaximo(){
+    return this->maximo;
+}
+
 /*
 template<class T>
 Arbol<T>::~Arbol()
@@ -33,7 +44,7 @@ bool Arbol<T>:: esVacio()
 template<class T>
 pair<T,T> Arbol<T>:: obtenerRaiz()
 {
-    return this->raiz;
+    return this->raiz->obtenerDato();
 }
 
 template<class T>
@@ -55,9 +66,9 @@ int Arbol<T>:: tamano()
 }
 
 template<class T>
-void Arbol<T>:: insertar(pair<T,T> val)
+void Arbol<T>:: insertar(pair<T,T> val, int ma)
 {
-    this->raiz->insertar(val);
+    this->raiz->insertar(val, ma);
 }
 
 /*

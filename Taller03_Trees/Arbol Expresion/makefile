@@ -1,5 +1,5 @@
 # Nombre del ejecutable
-EXEC = bin/arbolBinario
+EXEC = bin/main
 
 # Compilador
 CXX = g++
@@ -8,10 +8,10 @@ CXX = g++
 CXXFLAGS = -std=c++17 -w
 
 # Archivos fuente
-SRCS = arbolBinario.cpp
+SRCS = main.cpp
 
 # Archivos objeto
-OBJS = bin/arbolBinario.o
+OBJS = bin/main.o
 
 # Detectar sistema operativo
 OS := $(shell uname 2>/dev/null || echo Windows)
@@ -31,7 +31,7 @@ $(EXEC): $(OBJS)
 	$(CXX) $(OBJS) -o $(EXEC)
 
 # Regla para compilar archivos .cpp a .o en bin/
-bin/arbolBinario.o: arbolBinario.cpp | bin
+bin/main.o: main.cpp | bin
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Crear carpetas necesarias

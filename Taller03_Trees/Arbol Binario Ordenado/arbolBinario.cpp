@@ -1,25 +1,29 @@
 #include "ArbolBinario.h"
-#include "NodoBinario.h"
 
 #include <iostream>
 using namespace std;
 
 int main(){
     ArbolBinario<int> arbol;
-    int data;
-    while(data){
+    int data = 1;
+    
+    while(true){
+        cout<<"Ingrese el valor del nodo que quiere insertar: ";
         cin>>data;
+        if(data == 0){
+            break;
+        }
         arbol.insertar(data);
     }
-
+    
     cout<<"\nEl recorrido inOrdene es: \n";
-    arbol.inOrden();
+    arbol.inOrden(arbol.getRaiz());
     cout<<"\nEl recorrido posOrden es: \n";
-    arbol.posOrden();
+    arbol.posOrden(arbol.getRaiz());
     cout<<"\nEl recorrido preOrden es: \n";
-    arbol.inOrden();
+    arbol.preOrden(arbol.getRaiz());
     cout<<"\nEl recorrido levelOrden es: \n";
-    arbol.nivelOrden();
+    arbol.nivelOrden(arbol.getRaiz());
     
     return 0;
 }

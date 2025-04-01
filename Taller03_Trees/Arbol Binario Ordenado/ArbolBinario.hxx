@@ -1,10 +1,11 @@
 #include "ArbolBinario.h"
 #include <iostream>
+#include <queue>
 using namespace std;
 
 template <class T>
 ArbolBinario<T>::ArbolBinario(){
-	this->raiz=NULL;
+	this->raiz=new NodoBinario<T>;
 }
 
 template <class T>
@@ -97,9 +98,9 @@ bool ArbolBinario<T>::insertar(T& val, NodoBinario<T> *nod){
 	else if(val>nod->getDato())
 	{
 		//recorre los hijos de los hijos del hijo derecho
-		if(nod->getHijoDer!=NULL)
+		if(nod->getHijoDer()!=NULL)
 		{
-			insertar(val,nod->getHijoDer);
+			insertar(val,nod->getHijoDer());
 		}
 		// cuando ya no exite un hijo izquierdo inserta
 		else
@@ -113,4 +114,109 @@ bool ArbolBinario<T>::insertar(T& val, NodoBinario<T> *nod){
 	{
 		return false;
 	}
+}
+
+template <class T>
+void ArbolBinario<T>::inOrden(NodoBinario<T> *inicio){
+	if(inicio->getHijoIzq() != nullptr){
+		inOrden(inicio->getHijoIzq());
+	}
+
+	cout << "\t" << inicio->getDato() << endl;
+
+	if(inicio->getHijoDer() != nullptr){
+		inOrden(inicio->getHijoDer());
+	}
+	return;
+}
+template <class T>
+void ArbolBinario<T>::preOrden(NodoBinario<T> *inicio){
+
+	cout << "\t" << inicio->getDato() << endl;
+
+	if(inicio->getHijoIzq() != nullptr){
+		preOrden(inicio->getHijoIzq());
+	}
+
+
+	if(inicio->getHijoDer() != nullptr){
+		preOrden(inicio->getHijoDer());
+	}
+	return;
+}
+
+template <class T>
+void ArbolBinario<T>::posOrden(NodoBinario<T> *inicio){
+
+	
+
+	if(inicio->getHijoIzq() != nullptr){
+		inOrden(inicio->getHijoIzq());
+	}
+
+
+	if(inicio->getHijoDer() != nullptr){
+		inOrden(inicio->getHijoDer());
+	}
+
+	cout << "\t" << inicio->getDato() << endl;
+	return;
+}
+
+template <class T>
+NodoBinario<T>* ArbolBinario<T>::getRaiz(){
+	return this->raiz;
+}
+
+template <class T>
+void ArbolBinario<T>::insertar(T& val){
+	NodoBinario<T> *raiz = getRaiz();
+	NodoBinario<T> *aux = new NodoBinario<T>;
+	aux->setDato(val);
+	#pragma warning
+	if(raiz->getDato() == NULL){
+		raiz->setDato(val);
+		return;
+	}
+	while(true){
+		if(val < raiz->getDato()){
+			if( raiz->getHijoIzq() == nullptr){
+				raiz->setHijoIzq(aux);
+				return;
+			}else{
+				raiz = raiz->getHijoIzq();
+			}
+		}else{
+			if(raiz->getHijoDer() == nullptr){
+				raiz->setHijoDer(aux);
+				return;
+			}else{
+				raiz = raiz->getHijoDer();
+			}
+		}
+	}
+}
+
+template <class T>
+void ArbolBinario<T>::nivelOrden(NodoBinario<T>* inicio) {
+    if (inicio == nullptr) {
+        return;
+    }
+
+    queue<NodoBinario<T>*> cola;
+    cola.push(inicio);
+
+    while (!cola.empty()) {
+        NodoBinario<T>* actual = cola.front();
+        cola.pop();
+
+		cout << "\t" << actual->getDato() << endl;
+
+        if (actual->getHijoIzq() != nullptr) {
+            cola.push(actual->getHijoIzq());
+        }
+        if (actual->getHijoDer() != nullptr) {
+            cola.push(actual->getHijoDer());
+        }
+    }
 }

@@ -1,4 +1,4 @@
-#include "Nodo.h"
+#include "nodo.h"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -6,7 +6,7 @@ using namespace std;
 template<class T>
 Nodo<T>::Nodo()
 {
-
+    this->dato = {-1,-1};
     this->NW = NULL;
     this->NE = NULL;
     this->SW = NULL;
@@ -98,8 +98,14 @@ int Nodo<T>::tamano()
 }
 
 template<class T>
-void Nodo<T>:: insertar(pair<T,T> val)
+void Nodo<T>:: insertar(pair<T,T> val, int ma)
 {
+    if(this->dato.first == -1 && this->dato.second == -1){
+        this->dato.first = (val.first)/2;
+        this->dato.second = (val.second)/2;
+        return;
+    }
+
     /*Norte*/
     if(this->dato.first < val.first)
     {
@@ -107,7 +113,7 @@ void Nodo<T>:: insertar(pair<T,T> val)
         {
             if(this->NE!= NULL)
             {
-                this->NE->insertar(val);
+                this->NE->insertar(val, ma);
             }
             else
             {
@@ -120,7 +126,7 @@ void Nodo<T>:: insertar(pair<T,T> val)
         {
             if(this->SE!= NULL)
             {
-                this->SE->insertar(val);
+                this->SE->insertar(val, ma);
             }
             else
             {
@@ -138,7 +144,7 @@ void Nodo<T>:: insertar(pair<T,T> val)
         {
             if(this->NW!= NULL)
             {
-                this->NW->insertar(val);
+                this->NW->insertar(val, ma);
             }
             else
             {
@@ -151,7 +157,7 @@ void Nodo<T>:: insertar(pair<T,T> val)
         {
             if(this->SW!= NULL)
             {
-                this->SW->insertar(val);
+                this->SW->insertar(val, ma);
             }
             else
             {
