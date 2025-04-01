@@ -3,6 +3,9 @@
 
 using namespace std;
 
+/**
+ * Constructor por defecto
+ */
 template<class T>
 Nodo<T>::Nodo()
 {
@@ -13,6 +16,9 @@ Nodo<T>::Nodo()
     this->SE = NULL;
 }
 
+/**
+ * Constructor con valor 
+ */
 template<class T>
 Nodo<T>::Nodo(pair<T,T> val)
 {
@@ -23,13 +29,17 @@ Nodo<T>::Nodo(pair<T,T> val)
     this->SE = NULL;
 }
 
-
+/**
+ * Getter del atributo de nombre dato 
+ */
 template<class T>
 pair<T,T> Nodo<T>::obtenerDato()
 {
     return this->dato;
 }
-
+/**
+ * Setter del atributo de nombre dato
+ */
 template<class T>
 void Nodo<T>::fijarDato(pair<T,T> val)
 {
@@ -37,6 +47,9 @@ void Nodo<T>::fijarDato(pair<T,T> val)
     return;
 }
 
+/**
+ * Retorna un entero que indica la altura del nodo
+ */
 template<class T>
 int Nodo<T>::altura()
 {
@@ -70,7 +83,9 @@ int Nodo<T>::altura()
     }
 }
 
-
+/**
+ * Retorna la cantidad total de nodos
+ */
 template<class T>
 int Nodo<T>::tamano()
 {
@@ -97,6 +112,9 @@ int Nodo<T>::tamano()
     return cont;
 }
 
+/**
+ * inserta un nodo al quadtree
+ */
 template<class T>
 void Nodo<T>:: insertar(pair<T,T> val, int ma)
 {
@@ -169,6 +187,9 @@ void Nodo<T>:: insertar(pair<T,T> val, int ma)
     }
 }
 
+/**
+ * Busca un nodo determinado con base a su valor
+ */
 template<class T>
 Nodo<T>* Nodo<T>:: buscar(pair<T,T> val)
 {
@@ -234,6 +255,9 @@ Nodo<T>* Nodo<T>:: buscar(pair<T,T> val)
 
 }
 
+/**
+ * Imprime el arbol usando un recorrido preOrden
+ */
 template<class T>
 void Nodo<T>:: preOrden()
 {
@@ -252,7 +276,9 @@ void Nodo<T>:: preOrden()
 
 
 
-
+/**
+ * Imprime el arbol usando el recorrido posOrden
+ */
 
 template<class T>
 void Nodo<T>:: posOrden()

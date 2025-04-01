@@ -15,7 +15,7 @@ public:
     T& datoRaiz();
     int altura();
     int tamano();
-    void insertar(T& val);
+    void insertar(vector<T> val);
     bool eliminar(T& val);
     kdnodo<T>*  buscar(T& val);
     void preOrden();

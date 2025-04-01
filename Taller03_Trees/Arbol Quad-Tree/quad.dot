@@ -1,0 +1,19 @@
+digraph QuadTree {
+    node [shape=circle, style=filled, fillcolor=lightblue];
+    edge [color=black, penwidth=2];
+    rankdir=TB;
+    bgcolor=lightgrey;
+    label="KD-tree";
+    labelloc="t";
+    labeljust="c";
+
+    "Raíz (8x8)" -> "NW (3x4)";
+    "Raíz (8x8)" -> "NE (4x4)";
+    "Raíz (8x8)" -> "SE (4x4)";
+    "Raíz (8x8)" -> "SW (vacío)";
+
+    "NW (3x4)" -> "{3,4}";
+    "NE (4x4)" -> "{4,4}";
+    "NE (4x4)" -> "{6,4}";
+    "SE (4x4)" -> "{5,1}";
+}

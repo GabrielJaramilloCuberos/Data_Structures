@@ -1,3 +1,9 @@
+# KD-tree
+
+Este tipo de arboles es una estructura de datos no lineal que organiza puntos en unas dimensiones establecidas
+
+![Imagen](kd.svg)
+
 ## Complilacion
 
 usando el comando

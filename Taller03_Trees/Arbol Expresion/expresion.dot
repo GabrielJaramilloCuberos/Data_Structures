@@ -1,0 +1,25 @@
+// Representación del árbol en formato DOT
+digraph Tree {
+    node [shape=circle, style=filled, fillcolor=lightblue];
+    edge [color=black, penwidth=2];
+    rankdir=TB;
+    bgcolor=lightgrey;
+    label="Árbol De Expresión";
+    labelloc="t";
+    labeljust="c";
+
+    "-" -> "*";
+    "*" -> "/";
+    "/" -> 5;
+    "/" -> "- ";
+    "- " -> 7;
+    "- " -> "+";
+    "+" -> 113;
+    "+" -> "-  ";
+    "* " -> 1;
+    "-" -> "* ";
+    "* " -> "-   ";
+    "-   " -> 43;
+    "-   " -> "2 ";
+    "-  " -> 68;
+}

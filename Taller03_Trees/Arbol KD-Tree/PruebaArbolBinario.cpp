@@ -8,15 +8,23 @@ using namespace std;
 
 main(int argc, char* argv[])
 {
-    cout<<"ARBOL BINARIO ORDENADO"<<endl;
+    cout<<"Arbol-KD ORDENADO"<<endl;
     cout<<"****************************************************************"<<endl;
     kdtree<int> arbolito;
-	for(int i=0; i<15; i++)
+	int can;
+	cout<<"Cuantos elementos desea en el arbol: \n";
+	cin>>can;
+	for(int i=0; i<can; i++)
 	{
-	    cout<<"Inserte dato: ";
+	    cout<<"Cuantos datos desea: ";
 		int dato;
 		cin>>dato;
-		arbolito.insertar(dato);
+		vector<int> datos;
+		for(int j = 0; j<dato; j++){
+			int te; cin>>te;
+			datos.push_back(te);
+		}
+		arbolito.insertar(datos);
 	}
 
 	cout<<endl;

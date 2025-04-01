@@ -1,0 +1,110 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="469pt" height="393pt" viewBox="0.00 0.00 468.88 392.83">
+<g id="graph0" class="graph" transform="translate(4,388.8299865722656) scale(1)" data-name="QuadTree">
+
+<polygon fill="lightgrey" stroke="none" points="-4,4 -4,-388.83 464.88,-388.83 464.88,4 -4,4"/>
+<!-- Raíz (8x8) --><text text-anchor="middle" x="230.44" y="-368.23" font-family="Times,serif" font-size="14.00">KD-tree</text>
+<g id="node1" class="node" pointer-events="visible" data-name="Raíz (8x8)">
+
+<ellipse fill="lightblue" stroke="black" cx="226.46" cy="-305.82" rx="54.42" ry="54.42"/>
+<text text-anchor="middle" x="226.46" y="-301.62" font-family="Times,serif" font-size="14.00">Raíz (8x8)</text>
+</g>
+<!-- NW (3x4) -->
+<g id="node2" class="node" pointer-events="visible" data-name="NW (3x4)">
+
+<ellipse fill="lightblue" stroke="black" cx="50.46" cy="-158.18" rx="50.41" ry="50.41"/>
+<text text-anchor="middle" x="50.46" y="-153.98" font-family="Times,serif" font-size="14.00">NW (3x4)</text>
+</g>
+<!-- Raíz (8x8)&#45;&gt;NW (3x4) -->
+<g id="edge1" class="edge" data-name="Raíz (8x8)-&gt;NW (3x4)">
+
+<path fill="none" stroke="black" stroke-width="2" d="M183.98,-271.3C163.18,-254.73 137.85,-234.31 115.46,-215.61 109.73,-210.82 103.76,-205.75 97.86,-200.69"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="100.21,-198.1 90.35,-194.22 95.64,-203.4 100.21,-198.1"/>
+</g>
+<!-- NE (4x4) -->
+<g id="node3" class="node" pointer-events="visible" data-name="NE (4x4)">
+
+<ellipse fill="lightblue" stroke="black" cx="171.46" cy="-158.18" rx="47.48" ry="47.48"/>
+<text text-anchor="middle" x="171.46" y="-153.98" font-family="Times,serif" font-size="14.00">NE (4x4)</text>
+</g>
+<!-- Raíz (8x8)&#45;&gt;NE (4x4) -->
+<g id="edge2" class="edge" data-name="Raíz (8x8)-&gt;NE (4x4)">
+
+<path fill="none" stroke="black" stroke-width="2" d="M207.53,-254.7C202.72,-241.98 197.53,-228.23 192.63,-215.24"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="195.91,-214.02 189.1,-205.9 189.36,-216.49 195.91,-214.02"/>
+</g>
+<!-- SE (4x4) -->
+<g id="node4" class="node" pointer-events="visible" data-name="SE (4x4)">
+
+<ellipse fill="lightblue" stroke="black" cx="282.46" cy="-158.18" rx="45.78" ry="45.78"/>
+<text text-anchor="middle" x="282.46" y="-153.98" font-family="Times,serif" font-size="14.00">SE (4x4)</text>
+</g>
+<!-- Raíz (8x8)&#45;&gt;SE (4x4) -->
+<g id="edge3" class="edge" data-name="Raíz (8x8)-&gt;SE (4x4)">
+
+<path fill="none" stroke="black" stroke-width="2" d="M245.73,-254.7C250.86,-241.34 256.43,-226.86 261.65,-213.3"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="264.9,-214.58 265.23,-203.99 258.37,-212.07 264.9,-214.58"/>
+</g>
+<!-- SW (vacío) -->
+<g id="node5" class="node" pointer-events="visible" data-name="SW (vacío)">
+
+<ellipse fill="lightblue" stroke="black" cx="403.46" cy="-158.18" rx="57.35" ry="57.35"/>
+<text text-anchor="middle" x="403.46" y="-153.98" font-family="Times,serif" font-size="14.00">SW (vacío)</text>
+</g>
+<!-- Raíz (8x8)&#45;&gt;SW (vacío) -->
+<g id="edge4" class="edge" data-name="Raíz (8x8)-&gt;SW (vacío)">
+
+<path fill="none" stroke="black" stroke-width="2" d="M268.87,-271.23C289.66,-254.63 315,-234.23 337.46,-215.61 341.75,-212.05 346.18,-208.34 350.62,-204.6"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="352.62,-207.49 357.99,-198.36 348.1,-202.15 352.62,-207.49"/>
+</g>
+<!-- {3,4} -->
+<g id="node6" class="node" pointer-events="visible" data-name="{3,4}">
+
+<ellipse fill="lightblue" stroke="black" cx="39.46" cy="-32.38" rx="32.26" ry="32.26"/>
+<text text-anchor="middle" x="39.46" y="-28.18" font-family="Times,serif" font-size="14.00">{3,4}</text>
+</g>
+<!-- NW (3x4)&#45;&gt;{3,4} -->
+<g id="edge5" class="edge" data-name="NW (3x4)-&gt;{3,4}">
+
+<path fill="none" stroke="black" stroke-width="2" d="M46.05,-107.54C45.17,-97.64 44.25,-87.31 43.39,-77.61"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="46.89,-77.54 42.52,-67.89 39.92,-78.16 46.89,-77.54"/>
+</g>
+<!-- {4,4} -->
+<g id="node7" class="node" pointer-events="visible" data-name="{4,4}">
+
+<ellipse fill="lightblue" stroke="black" cx="122.46" cy="-32.38" rx="32.26" ry="32.26"/>
+<text text-anchor="middle" x="122.46" y="-28.18" font-family="Times,serif" font-size="14.00">{4,4}</text>
+</g>
+<!-- NE (4x4)&#45;&gt;{4,4} -->
+<g id="edge6" class="edge" data-name="NE (4x4)-&gt;{4,4}">
+
+<path fill="none" stroke="black" stroke-width="2" d="M154.18,-113.53C149.18,-100.9 143.74,-87.15 138.8,-74.66"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="142.1,-73.51 135.17,-65.5 135.6,-76.09 142.1,-73.51"/>
+</g>
+<!-- {6,4} -->
+<g id="node8" class="node" pointer-events="visible" data-name="{6,4}">
+
+<ellipse fill="lightblue" stroke="black" cx="205.46" cy="-32.38" rx="32.26" ry="32.26"/>
+<text text-anchor="middle" x="205.46" y="-28.18" font-family="Times,serif" font-size="14.00">{6,4}</text>
+</g>
+<!-- NE (4x4)&#45;&gt;{6,4} -->
+<g id="edge7" class="edge" data-name="NE (4x4)-&gt;{6,4}">
+
+<path fill="none" stroke="black" stroke-width="2" d="M183.83,-112.14C187.03,-100.48 190.47,-87.96 193.64,-76.42"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="197,-77.38 196.28,-66.81 190.25,-75.52 197,-77.38"/>
+</g>
+<!-- {5,1} -->
+<g id="node9" class="node" pointer-events="visible" data-name="{5,1}">
+
+<ellipse fill="lightblue" stroke="black" cx="288.46" cy="-32.38" rx="32.26" ry="32.26"/>
+<text text-anchor="middle" x="288.46" y="-28.18" font-family="Times,serif" font-size="14.00">{5,1}</text>
+</g>
+<!-- SE (4x4)&#45;&gt;{5,1} -->
+<g id="edge8" class="edge" data-name="SE (4x4)-&gt;{5,1}">
+
+<path fill="none" stroke="black" stroke-width="2" d="M284.64,-112.14C285.18,-100.9 285.77,-88.87 286.31,-77.68"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="289.79,-78.2 286.78,-68.04 282.8,-77.86 289.79,-78.2"/>
+</g>
+
+</g>
+</svg>

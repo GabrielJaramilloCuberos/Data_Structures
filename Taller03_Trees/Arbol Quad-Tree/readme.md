@@ -1,3 +1,9 @@
+# Quad-tree
+
+Estos arboles se caracterizan por representar generalmente puntos dentro de un espacio cartesiano
+
+![Imagen](quad.svg)
+
 ## Complilacion
 
 usando el comando

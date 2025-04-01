@@ -3,6 +3,9 @@
 #include <vector>
 using namespace std;
 
+/**
+ * Constructor por defecto
+ */
 template<class T>
 kdnodo<T>::kdnodo()
 {
@@ -10,49 +13,66 @@ kdnodo<T>::kdnodo()
     this->hijoDer = NULL;
     this->tag = 0;
 }
-
+/**
+ * Getter para el atributo de nombre dato
+ */
 template<class T>
 T& kdnodo<T>::obtenerDato()
 {
     return this->dato;
 }
 
+/**
+ * Setter para el atributo de nombre dato
+ */
 template<class T>
 void kdnodo<T>::fijarDato(vector < T >& val)
 {
     this->datos = val;
 }
-
+/**
+ * Setter para el atributo de nombre tag
+ */
 template<class T>
 void kdnodo<T>::fijarTag(int value)
 {
     this->tag = value;
 }
-
+/**
+ * Getter para hijo izquierdo del nodo
+ */
 template<class T>
 kdnodo<T>* kdnodo<T>::obtenerHijoIzq()
 {
     return this->hijoIzq;
 }
-
+/**
+ * Getter para hijo derecho del nodo
+ */
 template<class T>
 kdnodo<T>* kdnodo<T>::obtenerHijoDer()
 {
     return this->hijoDer;
 }
-
+/**
+ * Setter para hijo izquierdo del nodo
+ */
 template<class T>
 void kdnodo<T>::fijarHijoIzq(kdnodo<T> *izq)
 {
     this->hijoIzq = izq;
 }
-
+/**
+ * Setter para el hijo derecho del nodo
+ */
 template<class T>
 void kdnodo<T>::fijarHijoDer(kdnodo<T> *der)
 {
     this->hijoDer = der;
 }
-
+/**
+ * Devuelve la altura del nodo actual
+ */
 template<class T>
 int kdnodo<T>::altura()
 {
@@ -69,7 +89,9 @@ int kdnodo<T>::altura()
 	return max(this->hijoIzq->altura() , this->hijoDer->altura());
 }
 
-
+/**
+ * Retorna un entero que indica el numero de nodos presentes en el arbol
+ */
 template<class T>
 int kdnodo<T>::tamano()
 {
@@ -85,17 +107,19 @@ int kdnodo<T>::tamano()
 
 	return this->hijoIzq->tamano() + this->hijoDer->tamano() +1 ;
 }
-
+/**
+ * Inserta un nuevo nodo al arbol-KD
+ */
 template<class T>
 void kdnodo<T>:: insertar(vector < T >& val)
 {
 
-	if(val[this->tag] > this->datos[this->tag])
+	if(val[this->tag] >= this->datos[this->tag])
   {
 		if(this->hijoDer == NULL)
 		{
 			kdnodo* nuevo= new kdnodo();
-      nuevo->fijarTag((this->tag+1)%val.size());
+      		nuevo->fijarTag((this->tag+1)%val.size());
 			nuevo->fijarDato(val);
 			this->fijarHijoDer(nuevo);
 		}
@@ -122,7 +146,9 @@ void kdnodo<T>:: insertar(vector < T >& val)
 
 }
 
-
+/**
+ * Busca un nodo en el arbol que contenga un determinado valor 
+ */
 template<class T>
 kdnodo<T>* kdnodo<T>:: buscar(vector < T >& val)
 {
@@ -140,7 +166,9 @@ kdnodo<T>* kdnodo<T>:: buscar(vector < T >& val)
 		return this->hijoDer->buscar(val);
 	}
 }
-
+/**
+ * Imprime el arbol haciendo un recorrido preOrden
+ */
 template<class T>
 void kdnodo<T>:: preOrden()
 {
@@ -152,7 +180,9 @@ this->imprimir();
 	return;
 }
 
-
+/**
+ * Imprime el arbol haciendo un recorrido inOrden
+ */
 template<class T>
 void kdnodo<T>:: inOrden()
 {
@@ -168,7 +198,9 @@ void kdnodo<T>:: inOrden()
 }
 
 
-
+/**
+ * Imprime el arbol haciendo un recorrido posOrden
+ */
 template<class T>
 void kdnodo<T>:: posOrden()
 {
@@ -183,7 +215,9 @@ void kdnodo<T>:: posOrden()
 
 }
 
-
+/**
+ * Imprime el arbol recorriendolo por niveles
+ */
 template<class T>
 void kdnodo<T>:: nivelOrden()
 {
@@ -202,7 +236,9 @@ void kdnodo<T>:: nivelOrden()
 	}
 }
 
-
+/**
+ * Busca el valor maximo de todo el arbol
+ */
 template<class T>
 void kdnodo<T>:: maximo(int &maxi)
 {
@@ -218,7 +254,9 @@ void kdnodo<T>:: maximo(int &maxi)
 	return;
 
 }
-
+/**
+ * Busca el valor minimo de todo el arbol
+ */
 template<class T>
 void kdnodo<T>:: minimo(int &mini)
 {
@@ -235,7 +273,9 @@ void kdnodo<T>:: minimo(int &mini)
 
 }
 
-
+/**
+ * Imprime el arbol
+ */
 template<class T>
 void kdnodo<T>:: imprimir()
 {

@@ -6,8 +6,7 @@ using namespace std;
 int main(){
 
     Arbol<int> arbol({-1,-1});
-    cout<<"Cual quiere se sea el limite para el quadtree \n";
-    int borde; cin>>borde;
+    int borde = 8;
     arbol.setMaximo(borde);
     arbol.insertar({3,4}, borde);
     arbol.insertar({5,1}, borde);
