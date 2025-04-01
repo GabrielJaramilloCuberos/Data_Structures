@@ -6,7 +6,7 @@ using namespace std;
 int main(){
     ArbolBinario<int> arbol;
     int data = 1;
-    
+    //insercion de datos
     while(true){
         cout<<"Ingrese el valor del nodo que quiere insertar: ";
         cin>>data;
@@ -15,7 +15,7 @@ int main(){
         }
         arbol.insertar(data);
     }
-    
+    // Impresion de recorrido
     cout<<"\nEl recorrido inOrdene es: \n";
     arbol.inOrden(arbol.getRaiz());
     cout<<"\nEl recorrido posOrden es: \n";

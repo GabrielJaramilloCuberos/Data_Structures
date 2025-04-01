@@ -2,12 +2,12 @@
 #define __KDNODO__H__
 
 using namespace std;
-
+#include <vector>
 template< class T >
 class kdnodo
 {
   protected:
-    vector < T > datos;
+    vector<T>  datos;
     kdnodo<T> *hijoIzq;
     kdnodo<T> *hijoDer;
     int tag;

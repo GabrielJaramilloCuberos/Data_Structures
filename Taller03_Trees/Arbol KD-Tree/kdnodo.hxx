@@ -1,6 +1,6 @@
 #include "kdnodo.h"
-#include <bits/stdc++.h>
-
+#include <queue>
+#include <vector>
 using namespace std;
 
 template<class T>
@@ -20,7 +20,7 @@ T& kdnodo<T>::obtenerDato()
 template<class T>
 void kdnodo<T>::fijarDato(vector < T >& val)
 {
-    this->dato = val;
+    this->datos = val;
 }
 
 template<class T>
@@ -140,20 +140,6 @@ kdnodo<T>* kdnodo<T>:: buscar(vector < T >& val)
 		return this->hijoDer->buscar(val);
 	}
 }
-
-template<class T>
-bool knodo<T>::iguales(vector < T >& val)
-{
-  for(int i = 0 ; i < val.size() ; ++i)
-  {
-    if(this->datos[i] != val[i])
-    {
-      return false;
-    }
-  }
-  return true;
-}
-
 
 template<class T>
 void kdnodo<T>:: preOrden()

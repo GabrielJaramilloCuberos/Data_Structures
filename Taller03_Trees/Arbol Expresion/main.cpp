@@ -11,11 +11,11 @@ using namespace std;
   cout<<endl;
   cout<<"1. Construir Arbol Expresion: "<<endl;
   cout<<"-*/5-7+113-+2+1*43*2-68"<< endl;
+  //se crea un arbol de expresion usando el constructor por defecto
   ArbolExpresion* arbexp =new ArbolExpresion();
   string exp="-*/5-7+113-+2+1*43*2-68";
+  //Llena el arbol
   arbexp->llenarDesdePrefija(exp);
-
-
   cout<<"2. Imprimir Version Posfija"<<"=" << endl;
   arbexp->obtenerPosfija(arbexp->getRaiz());
   cout<<endl;

@@ -4,19 +4,33 @@
 #include <stack>
 using namespace std;
 
-
+/**
+ * Constructor por defecto
+ */
 ArbolExpresion::ArbolExpresion(){
 	this->raiz=NULL;
 }
+/**
+ * Destructor por defecto
+ */
 ArbolExpresion::~ArbolExpresion(){
 }
+/**
+ * Getter a la raiz del arbol de expresion
+ */
 NodoExpresion* ArbolExpresion::getRaiz(){
 	return this->raiz;
 }
+/**
+ * Setter de la raiz para el arbol
+ */
 void ArbolExpresion::setRaiz(NodoExpresion* nod){
 	this->raiz=nod;
 	return;
 }
+/**
+ * Evalua una expresion contenida en el arbol
+ */
 int ArbolExpresion::evaluar(NodoExpresion* nodi){
 	if(nodi->getHijoIzq()==NULL&&nodi->getHijoDer()==NULL){
 
@@ -49,7 +63,9 @@ int ArbolExpresion::evaluar(NodoExpresion* nodi){
 	}
 
 }
-
+/**
+ * Llena el arbol desde notacion PreFija
+ */
 void ArbolExpresion::llenarDesdePrefija(string &expresion){
 
 	char cad[expresion.size()];
@@ -88,7 +104,9 @@ void ArbolExpresion::llenarDesdePrefija(string &expresion){
 	this->setRaiz(n1);
 	miCola.pop();
 }
-
+/**
+ * Llena el arbol desde notacion PosFja
+ */
 void ArbolExpresion::llenarDesdePosfija(string &expresion){
 
 	char cad[expresion.size()];
@@ -128,7 +146,9 @@ void ArbolExpresion::llenarDesdePosfija(string &expresion){
 	this->setRaiz(n1);
 	miCola.pop();
 }
-
+/**
+ * Imprime el recorrido del arbol usando la notacion PreFija
+ */
 void ArbolExpresion::obtenerPrefija(NodoExpresion* inicio){
 	if(inicio==NULL){
 		return;
@@ -138,6 +158,9 @@ void ArbolExpresion::obtenerPrefija(NodoExpresion* inicio){
 		this->obtenerPrefija(inicio->getHijoDer());
 	}
 }
+/**
+ * Imprime el recorrido del arbol usando la notacion Infija
+ */
 void ArbolExpresion::obtenerInfija(NodoExpresion* inicio){
 	if(this->raiz!=NULL){
 		if(inicio->getHijoIzq()!=NULL){
@@ -151,6 +174,9 @@ void ArbolExpresion::obtenerInfija(NodoExpresion* inicio){
 		cout << "El arbol esta vacio" << '\n';
 	}
 }
+/**
+ * Imprime el recorrido del arobl usando la notacio Posfija
+ */
 void ArbolExpresion::obtenerPosfija(NodoExpresion* inicio){
 	if(inicio==NULL){
 		return;
@@ -160,7 +186,9 @@ void ArbolExpresion::obtenerPosfija(NodoExpresion* inicio){
 		cout<<inicio->getDato()<<" ";
 	}
 }
-
+/**
+ * Retorna si uno de los operandos es aceptabl dentro el arbol
+ */
 bool ArbolExpresion::siOperando(char car){
 	if(car=='+'||car=='-'||car=='/'||car=='*'||car=='%'){
 		return true;

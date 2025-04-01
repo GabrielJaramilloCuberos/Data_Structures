@@ -3,18 +3,28 @@
 #include <queue>
 using namespace std;
 
+
+/**
+ * Constructor por defecto
+ */
 template<class T>
 Nodo<T>::Nodo()
 {
     this->dato = T();
 }
 
+/**
+ * Constructor con valor
+ */
 template<class T>
 Nodo<T>::Nodo(T valor)
 {
     this->dato = valor;
 }
 
+/**
+ * * Destructor por defecto
+ */
 template<class T>
 Nodo<T>::~Nodo() {
     for (auto& hijo : hijos) {
@@ -22,12 +32,18 @@ Nodo<T>::~Nodo() {
     }
 }
 
+/**
+ * Getter de atributo dato
+ */
 template<class T>
 T& Nodo<T>::obtenerDato()
 {
     return this->dato;
 }
 
+/**
+ * Setter de atrbuto dato
+ */
 template<class T>
 void Nodo<T>::fijarDato(T& val)
 {
@@ -35,7 +51,9 @@ void Nodo<T>::fijarDato(T& val)
     return;
 }
 
-
+/**
+ * Retorna la altura del arbol
+ */
 template<class T>
 int Nodo<T>::altura() {
     if (hijos.empty()) return 0;
@@ -46,7 +64,9 @@ int Nodo<T>::altura() {
     return maxAltura + 1;
 }
 
-
+/**
+ * Retorna la cantidad de nodos que poseen los subarboles
+ */
 template<class T>
 int Nodo<T>::tamano()
 {
@@ -61,7 +81,9 @@ int Nodo<T>::tamano()
 	return conta+1;
 }
 
-
+/**
+ * Elimina todos los nodos descendientes
+ */
 template<class T>
 void Nodo<T>::limpiarLista() {
     for (int i = 0; i < hijos.size(); i++) {
@@ -71,15 +93,18 @@ void Nodo<T>::limpiarLista() {
     hijos.clear();
 }
 
-
-
+/**
+ * Añade un nodo a los descendientes 
+ */
 template<class T>
 void Nodo<T>::adicionarDesc(T &val) {
     Nodo<T>* hijo = new Nodo<T>(val);
     hijos.push_back(hijo);
 }
 
-
+/**
+ * Elimina un nodo especifico en los descendientes
+ */
 template<class T>
 bool Nodo<T>::eliminarDesc(T &val) {
     for (int i = 0; i < hijos.size(); i++) {
@@ -95,10 +120,12 @@ bool Nodo<T>::eliminarDesc(T &val) {
     }
 
 
-    return false; // Nodo no encontrado
+    return false;
 }
 
-
+/**
+ * Retorna el apuntar al nodo con cierto valor
+ */
 template<class T>
 Nodo<T>* Nodo<T>:: buscar(T val){
     if(dato == val)
@@ -115,7 +142,9 @@ Nodo<T>* Nodo<T>:: buscar(T val){
     return nullptr;
 
 }
-
+/**
+ * Imprime el recorrido preOrden
+ */
 template<class T>
 void Nodo<T>:: preOrden()
 {
@@ -125,7 +154,9 @@ void Nodo<T>:: preOrden()
 	}
 	return;
 }
-
+/**
+ * Imprime el recorrido posOrden
+ */
 template<class T>
 void Nodo<T>::posOrden() {
     for (int i = 0; i < hijos.size(); i++) {
@@ -133,6 +164,9 @@ void Nodo<T>::posOrden() {
     }
     cout << "\t" << this->obtenerDato() << endl;
 }
+/**
+ * Imprime el recorrido inOrden
+ */
 template <class T>
 void Nodo<T>::inOrden() {
     int mitad = hijos.size() / 2;
@@ -150,6 +184,9 @@ void Nodo<T>::inOrden() {
     return;
 }
 
+/**
+ * Imprime el recorrido el arbol por niveles
+ */
 template<class T>
 void Nodo<T>::nivelOrden(queue<Nodo*> &cola) {
     cola.push(this);

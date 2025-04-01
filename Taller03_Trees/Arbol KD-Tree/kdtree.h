@@ -2,7 +2,7 @@
 #define __KDTREE__H__
 
 #include "kdtree.h"
-
+#include "kdnodo.h"
 using namespace std;
 
 template<class T>

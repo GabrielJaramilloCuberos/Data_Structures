@@ -1,6 +1,6 @@
 #include "kdtree.h"
 #include "kdnodo.h"
-
+#include <vector>
 using namespace std;
 
 
@@ -45,11 +45,15 @@ template<class T>
 void kdtree<T>::insertar(T& val)
 {
 	if(this->raiz!=NULL){
-		this->raiz->insertar(val);
+		vector<T> v;
+		v.push_back(val);
+		this->raiz->insertar(v);
 	}
 	else{
 		kdnodo<T>* nuevo= new kdnodo<T>();
-		nuevo->fijarDato(val);
+		vector<T> v;
+		v.push_back(val);
+		nuevo->fijarDato(v);
 		this->raiz=nuevo;
 	}
 

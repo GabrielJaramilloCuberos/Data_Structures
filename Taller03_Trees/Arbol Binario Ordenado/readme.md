@@ -5,3 +5,17 @@ Los arboles binarios poseen las siguientes caracteristicas
 2. Tienen necesariamente un arbol de *2*
 
 ![Arbol binario Ordenado](arbol-binario-ordenado.svg)
+
+## Complilacion
+
+usando el comando
+```
+make clean
+```
+Se limpian los archivos binarios en caso de su existencia
+
+Posteriormente
+```
+make run
+```
+Para compilarlo y ejecutarlo

@@ -2,16 +2,23 @@
 #include <iostream>
 #include <queue>
 using namespace std;
-
+/**
+ * Constructor por defecto
+ */
 template <class T>
 ArbolBinario<T>::ArbolBinario(){
 	this->raiz=new NodoBinario<T>;
 }
-
+/**
+ * Destructor por defecto
+ */
 template <class T>
 ArbolBinario<T>::~ArbolBinario(){
 }
 
+/**
+ * Retorna un booleano verdadero en caso de ser nula la raiz, falso si contiene valor
+ */
 template <class T>
 bool ArbolBinario<T>::esVacio(){
 	if(this->raiz==NULL){
@@ -19,12 +26,16 @@ bool ArbolBinario<T>::esVacio(){
 	}
 	return false;
 }
-
+/**
+ * Getter del dato de la raiz
+ */
 template <class T>
 T& ArbolBinario<T>::datoRaiz(){
 	return (this->raiz).getDato();
 }
-
+/**
+ * Retorna un entero co la altura total del arbol
+ */
 template <class T>
 int ArbolBinario<T>::altura(NodoBinario<T> *inicio){
 	int alturaIzq=0;
@@ -48,6 +59,9 @@ int ArbolBinario<T>::altura(NodoBinario<T> *inicio){
 	}
 }
 
+/**
+ * Retorna un entero que representa la cantidad total de nodos
+ */
 template <class T>
 int ArbolBinario<T>::tamano(NodoBinario<T> *inicio){
 	int nodosIzq=0;
@@ -66,7 +80,9 @@ int ArbolBinario<T>::tamano(NodoBinario<T> *inicio){
 	}
 	return nodosIzq+nodosDer+1;
 }
-
+/**
+ * Inserta un nuevo nodo al arbol AVL
+ */
 template <class T>
 bool ArbolBinario<T>::insertar(T& val, NodoBinario<T> *nod){
 
@@ -116,6 +132,9 @@ bool ArbolBinario<T>::insertar(T& val, NodoBinario<T> *nod){
 	}
 }
 
+/**
+ * Imprime el recorrido inOrden del arbol
+ */
 template <class T>
 void ArbolBinario<T>::inOrden(NodoBinario<T> *inicio){
 	if(inicio->getHijoIzq() != nullptr){
@@ -129,6 +148,9 @@ void ArbolBinario<T>::inOrden(NodoBinario<T> *inicio){
 	}
 	return;
 }
+/**
+ * Imprime el recorrido preOrden del arbol
+ */
 template <class T>
 void ArbolBinario<T>::preOrden(NodoBinario<T> *inicio){
 
@@ -144,7 +166,9 @@ void ArbolBinario<T>::preOrden(NodoBinario<T> *inicio){
 	}
 	return;
 }
-
+/**
+ * Imprime el recorrido posOrden del arbol
+ */
 template <class T>
 void ArbolBinario<T>::posOrden(NodoBinario<T> *inicio){
 
@@ -162,12 +186,16 @@ void ArbolBinario<T>::posOrden(NodoBinario<T> *inicio){
 	cout << "\t" << inicio->getDato() << endl;
 	return;
 }
-
+/**
+ * Getter de la raiz
+ */
 template <class T>
 NodoBinario<T>* ArbolBinario<T>::getRaiz(){
 	return this->raiz;
 }
-
+/**
+ * Inserta un nuevo nodo con un valor al arbol
+ */
 template <class T>
 void ArbolBinario<T>::insertar(T& val){
 	NodoBinario<T> *raiz = getRaiz();
@@ -197,6 +225,9 @@ void ArbolBinario<T>::insertar(T& val){
 	}
 }
 
+/**
+ * Imprime el recorrido del arbol por niveles
+ */
 template <class T>
 void ArbolBinario<T>::nivelOrden(NodoBinario<T>* inicio) {
     if (inicio == nullptr) {
