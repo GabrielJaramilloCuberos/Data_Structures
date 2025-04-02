@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular de Salomon Avila
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #include "rbtree.h"
 
 // A recursive function to do level order traversal

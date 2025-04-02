@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular de Salomon Avila
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #ifndef RBTREE_H
 #define RBTREE_H
 
