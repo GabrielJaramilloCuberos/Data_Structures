@@ -3,6 +3,7 @@
 Los arboles red-black tambien conocidos como los rojo-negro, son arboles binarios autobalanceados, por lo cual, mantienen sus operaciones de busqueda, insercion y eliminacion en tiempo O(logN)
 
 La imagen generada con los inserts 11, 19, 7, 14, 17, 31, 26, 45, 70 es:
+
 ![Imagen](rbtree.svg)
 
 ## Complilacion
