@@ -1,0 +1,24 @@
+digraph RBTREE {
+    node [shape=circle, style=filled, fillcolor=lightblue];
+    edge [color=black, penwidth=2];
+    rankdir=TB;
+    bgcolor=lightgrey;
+    label="Red-Black tree";
+    labelloc="t";
+    labeljust="c";
+
+    11[fillcolor=red]
+    7[fillcolor=grey]
+    17[fillcolor=grey]
+    14[fillcolor=grey]
+    26[fillcolor=red]
+    19[fillcolor=grey]
+    31[fillcolor=red]
+    45[fillcolor=grey]
+    70[fillcolor=red]
+
+    17 -> {11 26}
+    11 -> {7 14}
+    26 -> {19 45}
+    45 -> {31 70}
+}
