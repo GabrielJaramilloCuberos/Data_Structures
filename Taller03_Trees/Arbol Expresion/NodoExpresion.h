@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #ifndef NODOEXPRESION_H
 #define NODOEXPRESION_H
 #include <string.h>
