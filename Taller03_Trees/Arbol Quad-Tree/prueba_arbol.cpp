@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular de Salomon Avila
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #include <bits/stdc++.h>
 #include "quadtree.h"
 
