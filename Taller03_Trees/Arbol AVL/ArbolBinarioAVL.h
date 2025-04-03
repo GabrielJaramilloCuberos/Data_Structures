@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #ifndef ARBOLBINARIOAVL_H
 #define ARBOLBINARIOAVL_H
 
