@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #ifndef NODOBINARIO_H
 #define NODOBINARIO_H
 
