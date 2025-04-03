@@ -2,7 +2,7 @@
 Autores:[SalomonAvila](https://github.com/SalomonAvila) y [GabrielJaramillo](https://github.com/GabrielJaramilloCuberos)
 
 ## Documento
-El documento se encuentra en [documento](/Jaramillo_Avila_Estructuras_Taller_3.pdf)
+El documento se encuentra en [documento](Jaramillo_Avila_Estructuras_Taller_3.pdf)
 
 ## Arbol
 En la carpeta [Arbol](/Taller03_Trees/Arbol/) Se encuentra el algoritmo y representacion de un arbol general. 
