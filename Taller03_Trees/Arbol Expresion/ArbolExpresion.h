@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #ifndef ARBOLEXPRESION_H
 #define  ARBOLEXPRESION_H
 #include "NodoExpresion.h"
