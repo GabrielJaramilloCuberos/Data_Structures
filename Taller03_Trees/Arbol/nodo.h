@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #ifndef __NODO__H__
 #define __NODO__H__
 
