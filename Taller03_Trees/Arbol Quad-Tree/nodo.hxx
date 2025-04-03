@@ -1,7 +1,7 @@
 //j
 
 /**
- * Implementacion modular de Salomon Avila
+ * Implementacion modular
  * Pontificia Universidad Javeriana
  * Bogota, Colombia
  */
