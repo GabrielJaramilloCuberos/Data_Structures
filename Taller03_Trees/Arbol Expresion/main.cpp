@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #include<iostream>
 #include "ArbolExpresion.h"
 #include "NodoExpresion.h"
