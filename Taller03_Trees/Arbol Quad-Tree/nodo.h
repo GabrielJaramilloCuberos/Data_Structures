@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular de Salomon Avila
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #ifndef __NODO__H__
 #define __NODO__H__
 
