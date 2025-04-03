@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #include "NodoBinario.h"
 #include <iostream>
 using namespace std;
