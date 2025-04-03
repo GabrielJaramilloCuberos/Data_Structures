@@ -1,3 +1,11 @@
+//j
+
+/**
+ * Implementacion modular
+ * Pontificia Universidad Javeriana
+ * Bogota, Colombia
+ */
+
 #ifndef ARBOLBINARIO_H
 #define ARBOLBINARIO_H
 #include "NodoBinario.h"
