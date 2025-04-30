@@ -44,7 +44,22 @@ make run
 > [!CAUTION]
 > Incluir el salto de linea y recordar el make clean antes de su ejecucion
 
+## Salidas esperadas
 
+### Grafo 1
+```
+No Hamiltonian path or cycle exist
+No euler's path or circuit exist:'
+```
+
+### Grafo 2
+```
+Hamiltonian path exists
+0-1 1-2 2-3 3-4 4-5 
+
+Euler's path exists:
+0-1 1-2 2-4 4-3 3-1 1-4 4-5 5-3 3-2 2-0
+```
 
 # Definiciones
 ## Grafos
