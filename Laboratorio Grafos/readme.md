@@ -1,14 +1,14 @@
 # Compilacion
-Se cuenta con un makefile para facilitar la ejecucion.
+Se cuenta con un makefile para facilitar la ejecución.
 
 ## Limpieza
 
-Se recomienda ejecutar antes de cualquier ejecucion
+Se recomienda ejecutar antes de cualquier ejecución
 ```
 make clean
 ```
 
-## Ejecucion primer grafo
+## Ejecución del primer grafo
 ```
 make run
 8
@@ -24,7 +24,7 @@ make run
 > [!CAUTION]
 > Incluir el salto de linea
 
-## Ejecucion segundo grafo
+## Ejecución del segundo grafo
 ```
 make run
 6
@@ -63,7 +63,7 @@ Euler's path exists:
 
 # Definiciones
 ## Grafos
-Estructuras de datos que permiten modelar y resolver problemas del mundo real. Se componen de nodos(vértices) y aristas, las cuales se encargan de relacionar nodos.
+Estructuras de datos que permiten modelar y resolver problemas del mundo real. Se componen de nodos (vértices) y aristas, las cuales se encargan de relacionar nodos.
 ### 1. Grafos no dirigidos
 Grafo en el que las aristas no tienen una dirección definida. Esto significa que una arista que conecta dos vértices, por ejemplo A y B, se puede recorrer de A a B o de B a A sin que eso cambie el significado o el flujo de trabajo.
 ### 2. Grafos dirigidos
@@ -81,9 +81,9 @@ Tipo de recorrido que se puede hacer en los diferentes tipos de grafos. Su carac
 ### 2. Circuitos de Hamilton
 Variante de los caminos de Hamilton. Estos circuitos buscan recorrer un grafo pasando por todos los vértices una sola vez. Su principal diferencia con los caminos de Hamilton es que en los circuitos de Hamilton el recorrido inicia desde un vértice en específico, y finaliza en dicho vértice, manteniendo la regla de recorrer cada vértice una sola vez.
 ## Algoritmo de Dijkstra
-Algoritmo que busca encontrar los caminos mas rápidos posibles. En el caso de los grafos, este algoritmo se puede usar en grafos ponderados para poder calcular la mejor ruta de un vértice a otro.
+Algoritmo que busca encontrar los caminos más rápidos posibles. En el caso de los grafos, este algoritmo se puede usar en grafos ponderados para poder calcular la mejor ruta de un vértice a otro.
 # Casos de grafos
-A continuación se presentan los casos de prueba para los grafos y los recorridos mencionados anteriormente. Para cada caso se evaluará si existe algún camino o circuito de Euler o Hamilton. Todos los casos son grafos no dirigidos.
+A continuación se presentan los casos de prueba para los grafos y los recorridos mencionados anteriormente. Para cada caso, se evaluará si existe algún camino o circuito de Euler o Hamilton. Todos los casos son grafos no dirigidos.
 ## 1. Caso uno
 
 ![](Grafo1.svg)
