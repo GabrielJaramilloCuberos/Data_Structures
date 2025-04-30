@@ -1,3 +1,1 @@
-#Compilacion
-Con comando g++ -o main main.cpp
-Ejecutar con ./main
+# Compilacion Con comando g++ -o main main.cpp Ejecutar con ./main

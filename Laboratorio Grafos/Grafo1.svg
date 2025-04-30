@@ -1,0 +1,80 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172pt" height="239pt" viewBox="0.00 0.00 172 238.8">
+<g id="graph0" class="graph" transform="translate(4,210) scale(1)" data-name="G">
+
+<polygon fill="lightgrey" stroke="none" points="-4,28.8 -4,-210 168,-210 168,28.8 -4,28.8"/>
+<!-- label --><text text-anchor="middle" x="82" y="16.6" font-family="Times,serif" font-size="14.00">Grafo 1</text>
+
+<!-- Cubos hijueputa -->
+
+<!-- 4 -->
+<g id="node1" class="node" pointer-events="visible" data-name="4">
+
+<ellipse fill="lightblue" stroke="black" cx="146.44" cy="-188.49" rx="18" ry="18"/>
+<text text-anchor="middle" x="146.44" y="-184.29" font-family="Times,serif" font-size="14.00">4</text>
+</g>
+<!-- 0 -->
+<g id="node2" class="node" pointer-events="visible" data-name="0">
+
+<ellipse fill="lightblue" stroke="black" cx="117.5" cy="-112.26" rx="18" ry="18"/>
+<text text-anchor="middle" x="117.5" y="-108.06" font-family="Times,serif" font-size="14.00">0</text>
+</g>
+<!-- 1 -->
+<g id="node3" class="node" pointer-events="visible" data-name="1">
+
+<ellipse fill="lightblue" stroke="black" cx="69.95" cy="-65.9" rx="18" ry="18"/>
+<text text-anchor="middle" x="69.95" y="-61.7" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- 0&#45;&#45;1 -->
+<g id="edge1" class="edge" data-name="0--1">
+
+<path fill="none" stroke="black" stroke-width="2" d="M104.25,-99.34C97.66,-92.91 89.71,-85.16 83.12,-78.75"/>
+</g>
+<!-- 2 -->
+<g id="node4" class="node" pointer-events="visible" data-name="2">
+
+<ellipse fill="lightblue" stroke="black" cx="94.32" cy="-165.31" rx="18" ry="18"/>
+<text text-anchor="middle" x="94.32" y="-161.11" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- 0&#45;&#45;2 -->
+<g id="edge2" class="edge" data-name="0--2">
+
+<path fill="none" stroke="black" stroke-width="2" d="M110.17,-129.04C107.46,-135.24 104.4,-142.25 101.69,-148.45"/>
+</g>
+<!-- 6 -->
+<g id="node6" class="node" pointer-events="visible" data-name="6">
+
+<ellipse fill="lightblue" stroke="black" cx="18.16" cy="-87.16" rx="18" ry="18"/>
+<text text-anchor="middle" x="18.16" y="-82.96" font-family="Times,serif" font-size="14.00">6</text>
+</g>
+<!-- 1&#45;&#45;6 -->
+<g id="edge5" class="edge" data-name="1--6">
+
+<path fill="none" stroke="black" stroke-width="2" d="M52.99,-72.86C47.21,-75.24 40.75,-77.89 34.97,-80.26"/>
+</g>
+<!-- 7 -->
+<g id="node7" class="node" pointer-events="visible" data-name="7">
+
+<ellipse fill="lightblue" stroke="black" cx="104.49" cy="-17.95" rx="18" ry="18"/>
+<text text-anchor="middle" x="104.49" y="-13.75" font-family="Times,serif" font-size="14.00">7</text>
+</g>
+<!-- 1&#45;&#45;7 -->
+<g id="edge6" class="edge" data-name="1--7">
+
+<path fill="none" stroke="black" stroke-width="2" d="M80.69,-50.99C84.88,-45.16 89.69,-38.5 93.87,-32.69"/>
+</g>
+<!-- 2&#45;&#45;4 -->
+<g id="edge4" class="edge" data-name="2--4">
+
+<path fill="none" stroke="black" stroke-width="2" d="M111.1,-172.77C117.05,-175.42 123.74,-178.4 129.69,-181.04"/>
+</g>
+<g id="node5" class="node" pointer-events="visible" data-name="3" data-comment="2--4">
+
+<ellipse fill="lightblue" stroke="black" cx="35.61" cy="-173.47" rx="18" ry="18"/>
+<text text-anchor="middle" x="35.61" y="-169.27" font-family="Times,serif" font-size="14.00">3</text>
+</g><g id="edge3" class="edge" data-name="2--3" data-comment="2--4">
+
+<path fill="none" stroke="black" stroke-width="2" d="M76.07,-167.85C68.93,-168.84 60.77,-169.97 53.65,-170.96"/>
+</g>
+</g>
+</svg>

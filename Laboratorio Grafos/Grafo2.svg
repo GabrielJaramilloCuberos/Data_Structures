@@ -1,0 +1,94 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="133pt" height="207pt" viewBox="0.00 0.00 133 206.8">
+<g id="graph0" class="graph" transform="translate(19.157203148306557,146.51612289689996) scale(0.6991453348252926)" data-name="G">
+
+<polygon fill="lightgrey" stroke="none" points="-4,28.8 -4,-178 129,-178 129,28.8 -4,28.8"/>
+<text text-anchor="middle" x="62.5" y="16.6" font-family="Times,serif" font-size="14.00">Grafo 2</text>
+<!-- 4 -->
+
+<!-- 0 -->
+<g id="node2" class="node" pointer-events="visible" data-name="0">
+
+<ellipse fill="lightblue" stroke="black" cx="106.5" cy="-17.56" rx="18" ry="18"/>
+<text text-anchor="middle" x="106.5" y="-13.36" font-family="Times,serif" font-size="14.00">0</text>
+</g>
+<!-- 1 -->
+<g id="node4" class="node" pointer-events="visible" data-name="1">
+
+<ellipse fill="lightblue" stroke="black" cx="105.61" cy="-80.37" rx="18" ry="18"/>
+<text text-anchor="middle" x="105.61" y="-76.17" font-family="Times,serif" font-size="14.00">1</text>
+</g><g id="edge5" class="edge" data-name="4--3" data-comment="1">
+
+<path fill="none" stroke="black" stroke-width="2" d="M33.94,-105.01C42.01,-109.89 51.83,-115.81 59.9,-120.69"/>
+</g><g id="edge10" class="edge" data-name="4--1" data-comment="1">
+
+<path fill="none" stroke="black" stroke-width="2" d="M36.4,-92.42C51.38,-89.81 72.57,-86.12 87.55,-83.51"/>
+</g>
+<g id="edge1" class="edge" data-name="0--1" data-comment="1">
+
+<path fill="none" stroke="black" stroke-width="2" d="M106.25,-35.72C106.13,-43.98 105.99,-53.74 105.87,-62.02"/>
+</g><!-- 2 -->
+<!-- 2 -->
+<g id="node3" class="node" pointer-events="visible" data-name="2">
+
+<ellipse fill="lightblue" stroke="black" cx="48.73" cy="-45.88" rx="18" ry="18"/>
+<text text-anchor="middle" x="48.73" y="-41.68" font-family="Times,serif" font-size="14.00">2</text>
+</g><g id="node5" class="node" pointer-events="visible" data-name="3" data-comment="2">
+
+<ellipse fill="lightblue" stroke="black" cx="75.51" cy="-130.11" rx="18" ry="18"/>
+<text text-anchor="middle" x="75.51" y="-125.91" font-family="Times,serif" font-size="14.00">3</text>
+</g><g id="node6" class="node" pointer-events="visible" data-name="5" data-comment="2">
+
+<ellipse fill="lightblue" stroke="black" cx="18.89" cy="-156.32" rx="18" ry="18"/>
+<text text-anchor="middle" x="18.89" y="-152.12" font-family="Times,serif" font-size="14.00">5</text>
+</g>
+<!-- 1&#45;&#45;2 -->
+
+<!-- 1&#45;&#45;2 -->
+<!-- 1&#45;&#45;2 -->
+<g id="edge2" class="edge" data-name="1--2">
+
+<path fill="none" stroke="black" stroke-width="2" d="M90.07,-70.94C82.04,-66.08 72.28,-60.16 64.26,-55.29"/>
+</g><g id="edge7" class="edge" data-name="4--5" data-comment="1--2">
+
+<path fill="none" stroke="black" stroke-width="2" d="M18.48,-113.8C18.56,-121.49 18.64,-130.42 18.71,-138.11"/>
+</g>
+
+<!-- 4 -->
+<g id="node1" class="node" pointer-events="visible" data-name="4">
+
+<ellipse fill="lightblue" stroke="black" cx="18.31" cy="-95.58" rx="18" ry="18"/>
+<text text-anchor="middle" x="18.31" y="-91.38" font-family="Times,serif" font-size="14.00">4</text>
+</g>
+<!-- 2&#45;&#45;4 -->
+<!-- 2&#45;&#45;4 -->
+<g id="edge4" class="edge" data-name="2--4">
+
+<path fill="none" stroke="black" stroke-width="2" d="M39.11,-61.6C35.49,-67.52 31.37,-74.23 27.77,-80.12"/>
+</g>
+
+<!-- 2&#45;&#45;0 -->
+<g id="edge6" class="edge" data-name="2--0">
+
+<path fill="none" stroke="black" stroke-width="2" d="M65.13,-37.84C73,-33.98 82.41,-29.37 90.26,-25.52"/>
+</g>
+<!-- 1&#45;&#45;3 -->
+<g id="edge3" class="edge" data-name="1--3">
+
+<path fill="none" stroke="black" stroke-width="2" d="M96.09,-96.11C92.57,-101.91 88.59,-108.49 85.08,-114.3"/>
+</g>
+
+<!-- 3&#45;&#45;5 -->
+<!-- 3&#45;&#45;5 -->
+<!-- 3&#45;&#45;5 -->
+<g id="edge8" class="edge" data-name="3--5">
+
+<path fill="none" stroke="black" stroke-width="2" d="M58.83,-137.83C51.52,-141.22 42.96,-145.18 35.64,-148.57"/>
+</g><g id="edge9" class="edge" data-name="3--2" data-comment="3--5">
+
+<path fill="none" stroke="black" stroke-width="2" d="M69.96,-112.66C65.36,-98.2 58.87,-77.76 54.27,-63.31"/>
+</g>
+
+
+</g>
+</svg>

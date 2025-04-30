@@ -1,0 +1,15 @@
+graph G {
+  node [shape=circle, style=filled, fillcolor=lightblue];
+  edge [color=black, penwidth=2];
+  label="Grafo 1";
+  rankdir=TB;
+  bgcolor=lightgrey;
+  layout=fdp
+  4[]
+  0 -- 1
+  0 -- 2
+  2 -- 3
+  2 -- 4
+  1 -- 6
+  1 -- 7
+}
