@@ -4,7 +4,7 @@
 #include <iostream>
 
 Cita::Cita() {
-    id = 0;
+    id = -1;
     autores = {};
     citaAutor = "";
     revista = "";
@@ -26,11 +26,11 @@ Cita::Cita(int idNuevo, vector<string> autoresNuevos, string revistaNueva, int e
         auxiliar += autores[0];
         auxiliar += ", et al.";
         citaAutor = auxiliar;
-    } else if (!autores.empty()) { // Verifica si el vector no está vacío
+    } else if (!autores.empty()) { 
         citaAutor = autores[0];
         citaAutor += ".";
     } else {
-        citaAutor = "Autor desconocido."; // Valor predeterminado si el vector está vacío
+        citaAutor = "Autor desconocido.";
     }
 }
 

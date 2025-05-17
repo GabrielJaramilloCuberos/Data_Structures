@@ -20,6 +20,7 @@ class Grafo{
         void setSiguienteId(int siguienteIdNuevo);
         int buscarCita(Cita u);
         void insertar(Cita u, Cita v);
+        int validarIndice(Cita u);
         void eliminar(Cita u, Cita v);
         Cita articuloConMayorCitaciones();
         int articulosAlrededorDeUnArticuloDeInteres(Cita u);
