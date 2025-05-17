@@ -40,7 +40,7 @@ vector<string> Cita::getAutores() { return autores; }
 string Cita::getCitaAutor() { return citaAutor; }
 string Cita::getRevista() { return revista; }
 int Cita::getEdicion() { return edicion; }
-
+string Cita::getAno() {return ano;}
 void Cita::setId(int idNuevo) {
     id = idNuevo;
 }
