@@ -1,3 +1,9 @@
+//j
+/**
+ * Autores: Salomon Avila y Gabriel Jaramillo
+ * Pontificia universidad javeriana
+ * Estructuras de datos
+ */
 #include "Cita.h"
 #include <vector>
 #include <string>

@@ -1,3 +1,10 @@
+//j
+/**
+ * Autores: Salomon Avila y Gabriel Jaramillo
+ * Pontificia universidad javeriana
+ * Estructuras de datos
+ */
+
 #include "TADS/Cita.h"
 #include "TADS/Grafo.h"
 #include <vector>
@@ -20,24 +27,31 @@ Cita anadirCita(int id)
     string ano, revista, citaAutor;
     int edicion;
     vector<string> autores;
+
     cout << "Ingrese el año de la cita: ";
     cin >> ano;
+
     cout << "Ingrese el nombre de la revista: ";
-    cin >> revista;
+    cin.ignore(); // Solo aquí, porque antes hubo un cin >>
+    getline(cin, revista);
+
     cout << "Ingrese la edición de la revista: ";
     cin >> edicion;
+
     cout << "Ingrese el autor principal de la cita: ";
-    cin.ignore();
+    cin.ignore(); // Solo aquí, porque antes hubo un cin >>
     getline(cin, citaAutor);
     autores.push_back(citaAutor);
+
     cout << "¿Cuántos coautores tiene esta cita? ";
     int numCoautores;
     cin >> numCoautores;
-    cin.ignore();
+
     for (int i = 0; i < numCoautores; i++)
     {
         string coautor;
         cout << "Ingrese el nombre del coautor " << i + 1 << ": ";
+        cin.ignore(); // Solo aquí, porque antes hubo un cin >>
         getline(cin, coautor);
         autores.push_back(coautor);
     }
@@ -112,38 +126,60 @@ int main()
         cout << "Conexión añadida exitosamente entre " << citaFuente.getCitaAutor()
              << " y " << citaDestino.getCitaAutor() << "." << endl;
     }
-    cout<<"Operacion 1: "<<endl;
-    Cita operacionUno = grafo.articuloConMayorCitaciones();
-    cout<<"Terminada la operacion 1: "<<endl;
-    cout<<"Con cual cita desea ejecutar la operacion 2? "<<endl;
+    cout << "Operacion 1: " << endl;
+    grafo.articuloConMayorCitaciones();
+    cout << "Terminada la operacion 1" << endl;
+    cout << "Con cual cita desea ejecutar la operacion 2? " << endl;
     mostrarExistentes(grafo);
     Cita temDos;
-    int resDos; cin>>resDos;
-    if(resDos != -1){
+    int resDos;
+    cin.ignore();
+    cout<<"Ignorado"<<endl;
+    cin >> resDos;
+    if (resDos >= 0 && resDos < grafo.getCitas().size())
+    {
         temDos = grafo.getCitas()[resDos][0];
+        grafo.articulosAlrededorDeUnArticuloDeInteres(temDos);
     }
-    int operacionDos = grafo.articulosAlrededorDeUnArticuloDeInteres(temDos);
-    cout<<"Terminada la operacion 2: "<<endl;
-    cout<<"Operacion 3: "<<endl;
-    cout<<"Con cual cita desea ejecutar la operacion 2? "<<endl;
+    else
+    {
+        cout << "Índice inválido o cancelado." << endl;
+    }
+    cout << "Terminada la operacion 2: " << endl;
+
+    cout << "Operacion 3: " << endl;
+    cout << "Con cual cita desea ejecutar la operacion 3? " << endl;
     mostrarExistentes(grafo);
     Cita temTres;
-    int resTres; cin>>resTres;
-    if(resTres != -1){
+    int resTres;
+    cin >> resTres;
+    if (resTres >= 0 && resTres < grafo.getCitas().size())
+    {
         temTres = grafo.getCitas()[resTres][0];
+        grafo.indiceDeReferenciacion(temTres);
     }
-    int operacionTres = grafo.indiceDeReferenciacion(temTres);
-    cout<<"Terminada la operacion 3: "<<endl;
-    cout<<"Operacion 4: "<<endl;
-    cout<<"Con cual cita desea ejecutar la operacion 2? "<<endl;
+    else
+    {
+        cout << "Índice inválido o cancelado." << endl;
+    }
+    cout << "Terminada la operacion 3: " << endl;
+
+    cout << "Operacion 4: " << endl;
+    cout << "Con cual cita desea ejecutar la operacion 4? " << endl;
     mostrarExistentes(grafo);
     Cita temCuatro;
-    int resCuatro; cin>>resCuatro;
-    if(resCuatro != -1){
+    int resCuatro;
+    cin >> resCuatro;
+    if (resCuatro >= 0 && resCuatro < grafo.getCitas().size())
+    {
         temCuatro = grafo.getCitas()[resCuatro][0];
+        grafo.citacionesIndirectasDesdeUnArticulo(temCuatro);
     }
-    int operacionCuatro = grafo.citacionesIndirectasDesdeUnArticulo(temCuatro);
-    cout<<"Terminada la operacion 4: "<<endl;
+    else
+    {
+        cout << "Índice inválido o cancelado." << endl;
+    }
+    cout << "Terminada la operacion 4: " << endl;
     cout << "\nLista de adyacencia del grafo:" << endl;
     vector<vector<Cita>> listaAdyacencia = grafo.getCitas();
     for (int i = 0; i < listaAdyacencia.size(); i++)

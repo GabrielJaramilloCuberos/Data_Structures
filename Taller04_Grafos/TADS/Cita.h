@@ -1,3 +1,10 @@
+//j
+/**
+ * Autores: Salomon Avila y Gabriel Jaramillo
+ * Pontificia universidad javeriana
+ * Estructuras de datos
+ */
+
 #ifndef CITA_H
 #define CITA_H
 

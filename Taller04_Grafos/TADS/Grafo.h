@@ -1,3 +1,10 @@
+//j
+/**
+ * Autores: Salomon Avila y Gabriel Jaramillo
+ * Pontificia universidad javeriana
+ * Estructuras de datos
+ */
+
 #ifndef GRAFO_H
 #define GRAFO_H
 
@@ -21,11 +28,11 @@ class Grafo{
         int buscarCita(Cita u);
         void insertar(Cita u, Cita v);
         int validarIndice(Cita u);
-        void eliminar(Cita u, Cita v);
-        Cita articuloConMayorCitaciones();
-        int articulosAlrededorDeUnArticuloDeInteres(Cita u);
-        int indiceDeReferenciacion(Cita u);
-        int citacionesIndirectasDesdeUnArticulo(Cita u);
+        void eliminar(vector<vector<Cita>> &citas, int idABorrar);
+        void articuloConMayorCitaciones();
+        void articulosAlrededorDeUnArticuloDeInteres(Cita u);
+        void indiceDeReferenciacion(Cita u);
+        void citacionesIndirectasDesdeUnArticulo(Cita u);
 };
 
 
